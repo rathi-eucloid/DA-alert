@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-script for scraping product pages from Amazon, Samsung, Lowes and Walmart using
-Playwright; BestBuy prices come from an Apify actor (tokens in the
+script for scraping product pages from Amazon, Samsung and Walmart using
+Playwright; BestBuy and Lowes prices come from Apify actors (tokens in the
 APIFY_API_TOKENS env var, see the APIFY section).
 - Saves each page's HTML to a unique file in outputs/ directory.
 - Parses each HTML to extract product price and model number (or SKU for Samsung).
@@ -76,11 +76,9 @@ RETRY_BACKOFF_SEC = 5
 AMAZON_RETRY_BACKOFF_SEC = 20
 AMAZON_BETWEEN_URL_GAP_SEC = 20
 
-# ---- Lowes / Walmart pacing ----
+# ---- Walmart pacing ----
 # Same values as the Amazon pacing above, kept as separate constants so tuning
 # one site never changes another.
-LOWES_RETRY_BACKOFF_SEC = 20
-LOWES_BETWEEN_URL_GAP_SEC = 20
 WALMART_RETRY_BACKOFF_SEC = 20
 WALMART_BETWEEN_URL_GAP_SEC = 20
 
@@ -774,12 +772,13 @@ def parse_amazon_html(html_file_path="amazon.html", expected_url=None):
 
 
 # -----------------------
-# APIFY (BestBuy only)
+# APIFY (BestBuy + Lowes)
 # -----------------------
-# BestBuy is fetched through an Apify actor instead of our own browser. It is
-# ONE actor run that takes every URL at once:
+# BestBuy and Lowes are fetched through Apify actors instead of our own
+# browser. Each site is ONE actor run that takes every URL at once:
 #   BestBuy: benthepythondev/bestbuy-scraper                (APIFY_BESTBUY_ACTOR)
-# (Amazon, Samsung, Lowes and Walmart are still scraped with Playwright.)
+#   Lowes  : dami_studio/lowes-scraper                      (APIFY_LOWES_ACTOR)
+# (Amazon, Samsung and Walmart are still scraped with Playwright.)
 #
 # Tokens: env var APIFY_API_TOKENS (a GitHub Actions secret), several tokens
 # separated by commas or newlines. They are used strictly in order; a token is
@@ -799,6 +798,7 @@ def parse_amazon_html(html_file_path="amazon.html", expected_url=None):
 
 APIFY_API_BASE = "https://api.apify.com/v2"
 APIFY_BESTBUY_ACTOR = "pbUZ4z2ORsyKhZshL"   # benthepythondev/bestbuy-scraper
+APIFY_LOWES_ACTOR = "Hchq3U0V6uJTxJax0"     # dami_studio/lowes-scraper
 
 APIFY_RUN_TIMEOUT_SEC = 900     # Apify aborts a run that takes longer than this
 APIFY_POLL_WAIT_SEC = 60        # each status poll blocks up to this long (Apify max 60)
@@ -925,7 +925,7 @@ class ApifyTokenPool:
         raw = os.environ.get("APIFY_API_TOKENS") or os.environ.get("APIFY_API_TOKEN") or ""
         tokens = [t for t in re.split(r"[\s,;]+", raw) if t]
         if not tokens:
-            print("⚠️ APIFY_API_TOKENS is not set -> BestBuy will be left blank")
+            print("⚠️ APIFY_API_TOKENS is not set -> BestBuy and Lowes will be left blank")
         else:
             print(f"🔑 {len(tokens)} Apify token(s) loaded")
         return cls(tokens)
@@ -1106,11 +1106,90 @@ def fetch_bestbuy_via_apify(urls, pool, output_dir="outputs"):
 
 
 # -----------------------
-# Real Chrome over CDP (used by the Lowes / Walmart scrapers)
+# LOWES-specific logic (via Apify)
+# -----------------------
+# Actor dami_studio/lowes-scraper (APIFY_LOWES_ACTOR). One row per product:
+#   productId  = the number at the end of the /pd/ url (used to match rows to URLs)
+#   price      = current selling price (number); listPrice = the "was" price,
+#                which is never used here
+#   modelNumber, priceScope (STORE / NETWORK / SOS), inStock, ...
+# Rows with a "charged" field (charged: false) are NOT products: the free
+# sample row and diagnostic/note rows (errorCode REFUSED, PRODUCT_NOT_FOUND,
+# ...). They are skipped. No storeNumber is passed, so the actor uses its
+# default store (0595), the same store on every run.
+def _lowes_item_is_product(item):
+    return "charged" not in item and bool(item.get("productId"))
+
+
+def _lowes_item_price(item):
+    """Current selling price as text, or None."""
+    num = clean_price_value(item.get("price"))
+    return f"{num:.2f}" if num and num > 0 else None
+
+
+def _lowes_item_done(item):
+    # A real product row is a final answer, even with price null (the actor
+    # returns null for special-order / quote-only items).
+    return _lowes_item_is_product(item)
+
+
+def fetch_lowes_via_apify(urls, pool, output_dir="outputs"):
+    """Lowes price per URL via the Apify actor. Returns results in URL order.
+
+    URLs are matched by Lowes' product id (the number at the end of the /pd/
+    url, e.g. 5013373117), which the actor returns as "productId".
+    """
+    keyed = {}
+    for u in urls:
+        pid = lowes_id_from_url(u) if u and u.strip() else None
+        if pid:
+            keyed.setdefault(pid, u.strip())
+
+    def build_input(todo):
+        # searchQueries=[] explicitly: the actor's console prefills "cordless
+        # drill"; an empty list guarantees only our URLs are scraped and billed.
+        return {"startUrls": todo, "searchQueries": [], "maxItems": len(todo),
+                "detailLevel": "listing"}
+
+    def item_key(item):
+        return str(item.get("productId")) if _lowes_item_is_product(item) else None
+
+    found = {}
+    if keyed and pool.tokens:
+        found = _apify_collect(pool, "Lowes", APIFY_LOWES_ACTOR, keyed,
+                               build_input, item_key, _lowes_item_done)
+        _save_apify_items(found, "Lowes", output_dir)
+
+    results = []
+    for idx, url in enumerate(urls, start=1):
+        if not url or not url.strip():
+            print(f"[Lowes {idx}/{len(urls)}] empty URL slot -> skipping")
+            results.append({"url": url, "file": None, "price": None, "model": None, "status": "empty"})
+            continue
+        item = found.get(lowes_id_from_url(url))
+        if item is None:
+            print(f"[Lowes {idx}/{len(urls)}] ❌ no data from Apify -> left blank")
+            results.append({"url": url, "file": None, "price": None, "model": None, "status": "error: no data from Apify"})
+            continue
+
+        price = _lowes_item_price(item)
+        model = item.get("modelNumber")
+        if price:
+            print(f"[Lowes {idx}/{len(urls)}] ✅ price {price} (model {model}, priceScope {item.get('priceScope')})")
+            result = {"price": price, "model": model, "status": "ok"}
+        else:
+            print(f"[Lowes {idx}/{len(urls)}] no price -> not available")
+            result = {"price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "no_price"}
+        results.append({"url": url, "file": None, **result})
+    return results
+
+
+# -----------------------
+# Real Chrome over CDP (used by the Walmart scraper)
 # -----------------------
 # Originally written for the old browser-based BestBuy scraper (hence the
-# BestBuy wording in the docstrings); BestBuy now uses Apify, and these are
-# kept unchanged for Lowes and Walmart.
+# BestBuy wording in the docstrings); BestBuy and Lowes now use Apify, and
+# these are kept unchanged for Walmart.
 def _find_free_port():
     """Return an OS-assigned free TCP port on localhost."""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -1459,22 +1538,23 @@ async def save_samsung_htmls(
     return results
 
 # -----------------------
-# LOWES / WALMART logic
+# WALMART logic
 # -----------------------
-# Both sites are scraped with the same flow as Amazon (load -> wait -> human-like
+# (Lowes used to share this browser flow; it now comes from Apify, see the
+# LOWES-specific logic section.)
+# Walmart is scraped with the same flow as Amazon (load -> wait -> human-like
 # mouse/scroll -> save HTML -> parse saved HTML -> retry transient failures),
 # with the same timings: goto wait_until="load" / 30s cap, 10s settle wait,
 # 3-6s random wait, 20s retry backoff, 20s gap between URLs.
 #
-# Differences from Amazon (verified by testing against the live US sites):
+# Differences from Amazon (verified by testing against the live US site):
 #   - Fresh session for EVERY url AND every retry: each attempt launches a new
 #     real Chrome process with a brand-new throwaway profile (via
 #     _launch_chrome_cdp, the BestBuy launcher). Nothing is shared between
 #     URLs and no cookies are ever saved.
 #   - Browser: Playwright's own launch (bundled Chromium or Chrome, headless,
-#     Amazon's custom user agent) is blocked by both sites: Walmart returns its
-#     "Robot or human?" page, Lowes returns "Access Denied" (HTTP 403). Even real
-#     Chrome is blocked when headless. Only HEADFUL real Chrome attached over CDP
+#     Amazon's custom user agent) is blocked: Walmart returns its "Robot or
+#     human?" page. Even real Chrome is blocked when headless. Only HEADFUL real Chrome attached over CDP
 #     passes, so that's what is used. On a display-less server run under Xvfb
 #     (same requirement as BestBuy).
 #   - No custom user agent: real Chrome sends its own, matching UA; overriding it
@@ -1492,81 +1572,7 @@ def _looks_blocked(html, site):
     title = _page_title(html).lower()
     if site == "walmart":
         return "robot or human" in title
-    if site == "lowes":
-        return "access denied" in title
     return False
-
-
-def parse_lowes_html(html_file_path, expected_url=None):
-    """Return (price_text_or_None, redirected_bool, unavailable_bool).
-
-    - Redirect: requested item id (last number in the /pd/ url) vs the page's
-      canonical link.
-    - Price: JSON-LD Product whose "sku" equals the requested item id ->
-      offers.price. This is the main product only (related items carry no
-      JSON-LD Product), so no stray prices are picked up.
-      Fallback: the visible price inside the main buy-box Price component
-      (data-component-name="Price"). Other blocks on the page (e.g. "Compatible
-      Accessories") also use data-testid="main-price", so the search is scoped
-      to the Price component, never the whole page.
-    - Unavailable: the JSON-LD Product exists but carries NO offer (Lowes isn't
-      selling it: no price, no add-to-cart), the offer availability is
-      OutOfStock / Discontinued, or the page says it's no longer available.
-    Note: Lowes prices are tied to the store chosen from the visitor's location.
-    """
-    if not os.path.exists(html_file_path):
-        print(f"Error: HTML file '{html_file_path}' not found.")
-        return None, False, False
-
-    with open(html_file_path, "r", encoding="utf-8", errors="ignore") as f:
-        html = f.read()
-
-    # -------- REDIRECT DETECTION --------
-    expected_id = lowes_id_from_url(expected_url) if expected_url else None
-    canonical = get_canonical_href(html)
-    if expected_id and canonical:
-        can_id = lowes_id_from_url(canonical)
-        if can_id and can_id != expected_id:
-            print(f"[REDIRECT] requested {expected_id} but page is {can_id} -> not available")
-            return None, True, False
-
-    # -------- PRICE from JSON-LD Product offer keyed to the item id --------
-    price = None
-    unavailable = False
-    for it in iter_ldjson(html):
-        if not isinstance(it, dict) or it.get("@type") != "Product":
-            continue
-        if expected_id and str(it.get("sku", "")) != expected_id:
-            continue
-        offers = it.get("offers")
-        if not offers:
-            # server-rendered product data with no offer at all -> not sold
-            unavailable = True
-        for off in (offers if isinstance(offers, list) else [offers]):
-            if not isinstance(off, dict):
-                continue
-            avail = str(off.get("availability", "")).lower()
-            if "outofstock" in avail or "discontinued" in avail:
-                unavailable = True
-            if price is None and off.get("price") not in (None, ""):
-                price = str(off["price"])
-        break
-
-    # -------- PRICE fallback: visible price in the main Price component --------
-    if not price and not unavailable:
-        soup = BeautifulSoup(html, "lxml")
-        price_block = soup.find(attrs={"data-component-name": "Price"})
-        main = price_block.find(attrs={"data-testid": "main-price"}) if price_block else None
-        if main and main.parent:
-            sr = main.parent.find("span", class_="screen-reader")
-            if sr and sr.get_text(strip=True):
-                price = sr.get_text(strip=True)
-
-    if not price and "this item is no longer available" in html.lower():
-        unavailable = True
-
-    print(f"🔎 Lowes extracted price: {price}" + (" (unavailable)" if unavailable else ""))
-    return price, False, unavailable
 
 
 def parse_walmart_html(html_file_path, expected_url=None):
@@ -1640,7 +1646,7 @@ async def _save_htmls_fresh_chrome(
     between_url_gap_sec,
     output_dir="outputs",
 ):
-    """Shared Lowes/Walmart loop: for each url (and each retry) launch a FRESH
+    """Browser loop (used by Walmart): for each url (and each retry) launch a FRESH
     real Chrome (new process + new throwaway profile = fresh session), load the
     page Amazon-style, save the HTML, parse it, and tear everything down.
     Returns one result dict per url, in url order (empty slots included)."""
@@ -1758,12 +1764,6 @@ async def _save_htmls_fresh_chrome(
                 await asyncio.sleep(between_url_gap_sec)
 
     return results
-
-
-async def save_lowes_htmls(urls, output_dir="outputs"):
-    return await _save_htmls_fresh_chrome(
-        "lowes", "Lowes", urls, parse_lowes_html,
-        LOWES_RETRY_BACKOFF_SEC, LOWES_BETWEEN_URL_GAP_SEC, output_dir)
 
 
 async def save_walmart_htmls(urls, output_dir="outputs"):
@@ -1890,8 +1890,8 @@ async def main():
     for r in sam_res:
         print(r)
 
-    print("\n=== Running Lowes scraper ===")
-    lo_res = await save_lowes_htmls(lowes_urls, output_dir="outputs")
+    print("\n=== Running Lowes (Apify) ===")
+    lo_res = fetch_lowes_via_apify(lowes_urls, apify_pool, output_dir="outputs")
     print("\nLowes Summary:")
     for r in lo_res:
         print(r)
