@@ -1301,6 +1301,24 @@ def extract_price(filename, expected_url=None):
     print("🔎 Extracted Price:", price)
     return price, False
 
+
+def _samsung_offer_unavailable(html, expected_url):
+    """True when the JSON-LD offer for THIS sku says it can't be bought
+    (OutOfStock / SoldOut / Discontinued).
+
+    Used instead of _looks_unavailable(html, "samsung"): that searches the whole
+    page for "out of stock" / "notify me" / "sold out", and every Samsung page
+    (in-stock ones too) contains those words in its built-in message templates,
+    e.g. "{capacity} in {color} is out of stock" -> it is always True.
+    """
+    sku = (extract_sku_from_url(expected_url) or "").lower()
+    for it in iter_ldjson(html):
+        if isinstance(it, dict) and it.get("sku") and str(it["sku"]).lower() == sku:
+            off = it.get("offers")
+            avail = str(off.get("availability", "")).lower() if isinstance(off, dict) else ""
+            return any(k in avail for k in ("outofstock", "soldout", "discontinued"))
+    return False
+
 async def save_samsung_htmls(
     urls,
     output_dir="outputs",
@@ -1335,9 +1353,9 @@ async def save_samsung_htmls(
                 output_file = os.path.join(output_dir, f"samsung_{idx}_{safe_name}.html")
                 sku = extract_sku_from_url(url)
 
-                # Retry transient failures (nav error / timeout / #device_info not
-                # loaded / price not rendered). A redirect or a genuine sold-out /
-                # coming-soon page is final and is NOT retried.
+                # Retry transient failures (nav error / timeout / price not
+                # rendered). A redirect or a JSON-LD offer marked out of stock /
+                # discontinued is final and is NOT retried.
                 result = None
                 for attempt in range(1, MAX_ATTEMPTS + 1):
                     context = None
@@ -1364,15 +1382,25 @@ async def save_samsung_htmls(
                         print("Waiting for network to be idle...")
                         await wait_network_idle(page, timeout=20000)
 
-                        print("Waiting for #device_info box...")
-                        device_info_ok = True
+                        # The price is read from the JSON-LD Product offer (see
+                        # extract_price), so wait for that. (The old wait for
+                        # #device_info is gone: that box exists only on Galaxy
+                        # phone pages, never on appliance pages like refrigerators,
+                        # so it always timed out and the page was never parsed.)
+                        print("Waiting for product JSON-LD offer...")
                         try:
-                            await page.wait_for_selector("#device_info", timeout=20000)
-                            # Extra wait for prices inside #device_info
-                            await page.wait_for_selector("#device_info span", timeout=15000)
-                        except TimeoutError:
-                            print("❌ #device_info did NOT load — Samsung blocked or loaded too slowly.")
-                            device_info_ok = False
+                            await page.wait_for_function(
+                                """() => {
+                                    const s = document.querySelectorAll('script[type="application/ld+json"]');
+                                    for (const el of s) {
+                                        if (el.textContent && el.textContent.indexOf('"offers"') !== -1) return true;
+                                    }
+                                    return false;
+                                }""",
+                                timeout=20000,
+                            )
+                        except Exception:
+                            print("⚠️ product JSON-LD offer not detected within 20s; parsing saved page anyway")
 
                         # Save HTML (resilient to any mid-load client-side navigation)
                         html = await get_page_content_safe(page)
@@ -1380,27 +1408,22 @@ async def save_samsung_htmls(
                             f.write(html)
                         print(f"✅ HTML saved to {output_file}")
 
-                        if not device_info_ok:
-                            # transient (page structure never appeared) -> retry
-                            result = {"url": url, "file": output_file, "price": None, "sku": sku, "status": "partial: no device_info"}
-                            print(f"⚠️ #device_info missing (attempt {attempt}/{MAX_ATTEMPTS})")
+                        # Parse saved HTML (updated: redirect-aware, JSON-LD by SKU)
+                        price, redirected = extract_price(output_file, expected_url=url)
+                        if redirected:
+                            print("[REDIRECT] Samsung redirect -> not available")
+                            result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "sku": NOT_AVAILABLE, "status": "redirect"}
+                            break  # final: different product
+                        elif price:
+                            print("🔎 Final extracted values — Price:", price, "SKU:", sku)
+                            result = {"url": url, "file": output_file, "price": price, "sku": sku, "status": "ok"}
+                            break  # final: got a price
                         else:
-                            # Parse saved HTML (updated: redirect-aware, JSON-LD by SKU)
-                            price, redirected = extract_price(output_file, expected_url=url)
-                            if redirected:
-                                print("[REDIRECT] Samsung redirect -> not available")
-                                result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "sku": NOT_AVAILABLE, "status": "redirect"}
-                                break  # final: different product
-                            elif price:
-                                print("🔎 Final extracted values — Price:", price, "SKU:", sku)
-                                result = {"url": url, "file": output_file, "price": price, "sku": sku, "status": "ok"}
-                                break  # final: got a price
-                            else:
-                                result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "sku": NOT_AVAILABLE, "status": "no_price"}
-                                if _looks_unavailable(html, "samsung"):
-                                    print("ℹ️ page marked sold out / coming soon -> final, not retrying")
-                                    break
-                                print(f"⚠️ price not found & page not marked unavailable (attempt {attempt}/{MAX_ATTEMPTS})")
+                            result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "sku": NOT_AVAILABLE, "status": "no_price"}
+                            if _samsung_offer_unavailable(html, url):
+                                print("ℹ️ JSON-LD offer for this SKU is out of stock / discontinued -> final, not retrying")
+                                break
+                            print(f"⚠️ price not found & page not marked unavailable (attempt {attempt}/{MAX_ATTEMPTS})")
 
                         # tiny cooperative yield
                         await human_delay_short()
