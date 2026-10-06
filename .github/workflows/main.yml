@@ -10,7 +10,7 @@ name: Run price scraper (every 6 hours EST + manual with logging)
 # (During EDT/summer these land one hour later in local wall-clock time.)
 on:
   schedule:
-    - cron: '0 9,21 * * *'
+    - cron: '0 10,22 * * *'
   workflow_dispatch: {}
 
 permissions:
