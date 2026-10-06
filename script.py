@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-script for scraping product pages from Amazon, Samsung and Walmart using
-Playwright; BestBuy and Lowes prices come from Apify actors (tokens in the
+script for scraping product pages from Samsung and Walmart using
+Playwright; Amazon, BestBuy and Lowes prices come from Apify actors (tokens in the
 APIFY_API_TOKENS env var, see the APIFY section).
 - Saves each page's HTML to a unique file in outputs/ directory.
 - Parses each HTML to extract product price and model number (or SKU for Samsung).
@@ -30,7 +30,6 @@ import urllib.request
 
 from urllib.parse import quote_plus
 from playwright.async_api import async_playwright, TimeoutError
-from bs4 import BeautifulSoup
 
 from openpyxl.utils import column_index_from_string, get_column_letter
 # new imports for Excel writing
@@ -47,11 +46,11 @@ from openpyxl import Workbook, load_workbook
 # 2. Duplicate-element fix: the old hardcoded selectors matched many elements on
 #    the page (related items, sponsored, carousels), causing wrong reads. We now
 #    scope price extraction to the MAIN price container only.
-# 3. Updated selectors for current UI: Amazon price -> corePriceDisplay /
-#    priceToPay; BestBuy & Samsung price -> JSON-LD offer (Samsung keyed by SKU).
-# 4. BestBuy is no longer scraped with a browser; it comes from an Apify actor
-#    (see the APIFY section). Redirect detection for it compares the requested
-#    BestBuy product code with what the actor returned.
+# 3. Updated selectors for current UI: Samsung price -> JSON-LD offer keyed by SKU.
+# 4. Amazon, BestBuy and Lowes are no longer scraped with a browser; they come
+#    from Apify actors (see the APIFY section). Redirect detection for Amazon /
+#    BestBuy compares the requested ASIN / product code with what the actor
+#    returned.
 # 5. results.xlsx now uses the same layout as "Price Comparisons_v3_WIP":
 #    51 product groups x 9 columns starting at column C, timestamp in column B.
 # Everything else (URLs, delays, user agents, cookies logic) is unchanged.
@@ -65,20 +64,10 @@ NOT_AVAILABLE = "not available"
 MAX_ATTEMPTS = 3
 RETRY_BACKOFF_SEC = 5
 
-# ---- Amazon-only pacing ----
-# RETRY_BACKOFF_SEC above is used by the Samsung scraper, so these
-# Amazon-specific values are kept separate: changing the shared constant would
-# also slow Samsung down. (BestBuy retries are separate: see APIFY_ROUNDS.)
-#   AMAZON_RETRY_BACKOFF_SEC   - wait before re-attempting the SAME url
-#   AMAZON_BETWEEN_URL_GAP_SEC - wait after finishing one url, before the next
-# Amazon rate-limits rapid sequential product-page hits and answers with a
-# CAPTCHA page instead of the product, so both gaps are deliberately generous.
-AMAZON_RETRY_BACKOFF_SEC = 20
-AMAZON_BETWEEN_URL_GAP_SEC = 20
-
 # ---- Walmart pacing ----
-# Same values as the Amazon pacing above, kept as separate constants so tuning
-# one site never changes another.
+# Wait before re-attempting the SAME url / after finishing one url, before
+# the next. Kept separate from RETRY_BACKOFF_SEC (Samsung) so tuning one
+# site never changes another.
 WALMART_RETRY_BACKOFF_SEC = 20
 WALMART_BETWEEN_URL_GAP_SEC = 20
 
@@ -158,31 +147,6 @@ def _looks_unavailable(html, site):
     if site == "samsung":
         return ("sold out" in low or "coming soon" in low
                 or "out of stock" in low or "notify me" in low)
-    return False
-
-
-def _amazon_buybox_is_used(html):
-    """True when the WINNING Amazon buybox offer is a USED/renewed device.
-
-    We only want NEW-device prices. Some listings (e.g. a couple of S25 Edge
-    variants) have a USED offer as the featured buybox, so the main price
-    container shows the used price. We must NOT capture that.
-
-    Two precise signals, verified against the saved pages:
-      1. <div id="usedBuySection"> — Amazon renders this only when the featured
-         buybox offer's condition is used ("Buy used: $...").
-      2. A "Used: <condition>" label in the buybox (Like New / Very Good / Good /
-         Acceptable).
-    Both fire together on used-buybox pages and on NONE of the new-condition
-    pages — including listings that merely OFFER a used alternative in a separate
-    accordion (their buybox winner is still new), so this does not false-positive.
-    """
-    if not html:
-        return False
-    if re.search(r'id=["\']usedBuySection["\']', html):
-        return True
-    if re.search(r'Used:\s*(Like New|Very Good|Good|Acceptable)', html, re.I):
-        return True
     return False
 
 
@@ -570,215 +534,14 @@ def copy_columns_by_references(
 
 
 # -----------------------
-# AMAZON-specific logic
+# APIFY (Amazon + BestBuy + Lowes)
 # -----------------------
-async def save_amazon_htmls(
-    urls,
-    output_dir="outputs",
-    cookies_file="amazon_cookies.json",
-    headless=True,
-):
-    """Loop over the list of URLs and save each HTML to a unique file. Uses a fresh
-    cookieless session each run; cookies are discarded at the end, never saved."""
-    os.makedirs(output_dir, exist_ok=True)
-
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=headless, slow_mo=100)
-
-        # Always start a fresh, cookieless session. Cookies are NOT loaded from
-        # or saved to cookies_file; they live only in memory for this run and are
-        # discarded when the browser closes.
-        print("🆕 Creating a new session (Amazon cookies are not persisted)...")
-        context = await browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/120.0.0.0 Safari/537.36"
-            ),
-            viewport={"width": 1366, "height": 768},
-        )
-
-        try:
-            results = []
-            for idx, url in enumerate(urls, start=1):
-                # empty slot (e.g. product not yet listed): keep the position so
-                # results stay aligned with the product groups, but skip cleanly.
-                if not url or not url.strip():
-                    print(f"\n[Amazon {idx}/{len(urls)}] empty URL slot -> skipping")
-                    results.append({"url": url, "file": None, "price": None, "model": None, "status": "empty"})
-                    continue
-                # Retry transient failures (nav error / timeout / price not
-                # rendered). A redirect or a genuine "Currently unavailable" page
-                # is a FINAL answer and is NOT retried.
-                safe_name = sanitize_filename(url)[:120]
-                output_file = os.path.join(output_dir, f"amazon_{idx}_{safe_name}.html")
-                result = None
-                for attempt in range(1, MAX_ATTEMPTS + 1):
-                    page = None
-                    try:
-                        page = await context.new_page()
-                        print(f"\n[Amazon {idx}/{len(urls)}] (attempt {attempt}/{MAX_ATTEMPTS}) Navigating to {url} ...")
-                        try:
-                            # 30s hard cap so a slow page can't stall the whole run.
-                            await page.goto(url, wait_until="load", timeout=30000)
-                        except TimeoutError:
-                            print(f"⚠️ navigation timeout for {url} after 30s. Continuing anyway...")
-                            try:
-                                await page.wait_for_load_state("domcontentloaded", timeout=7000)
-                            except TimeoutError:
-                                pass
-                        await asyncio.sleep(10)  # Extra wait to ensure dynamic content loads
-
-                        # Wait randomly for page content to settle
-                        await human_delay(3, 6)
-
-                        # 🖱️ Simulate random human-like mouse movement
-                        for _ in range(3):
-                            x = random.randint(200, 800)
-                            y = random.randint(200, 600)
-                            await page.mouse.move(x, y, steps=random.randint(5, 15))
-                            await human_delay(0.3, 1.5)
-
-                        # 🖱️ Random scrolling
-                        for _ in range(2):
-                            scroll_y = random.randint(400, 1000)
-                            await page.mouse.wheel(0, scroll_y)
-                            await human_delay(1, 3)
-
-                        # Extract HTML (resilient to any mid-load client-side navigation)
-                        html_content = await get_page_content_safe(page)
-                        with open(output_file, "w", encoding="utf-8") as f:
-                            f.write(html_content)
-                        print(f"✅ HTML saved to {output_file}")
-
-                        # parse (updated: redirect-aware, scoped price)
-                        price, redirected = parse_amazon_html(output_file, expected_url=url)
-
-                        if redirected:
-                            result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "redirect"}
-                            break  # final: different product
-                        if price:
-                            # Amazon no longer exposes the SM- model on the page; the
-                            # writer fills SKU_Amazon from the known per-slot SM code.
-                            result = {"url": url, "file": output_file, "price": price, "model": None, "status": "ok"}
-                            break  # final: got a price
-                        # No price. If the page explicitly says unavailable, that's
-                        # a genuine result -> final. Otherwise the price element just
-                        # didn't render -> transient -> retry.
-                        result = {"url": url, "file": output_file, "price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "no_price"}
-                        if _looks_unavailable(html_content, "amazon"):
-                            print("ℹ️ page marked 'Currently unavailable' -> final, not retrying")
-                            break
-                        if _amazon_buybox_is_used(html_content):
-                            # Used-buybox: the new price is genuinely not offered.
-                            # Retrying won't change the condition -> final.
-                            print("ℹ️ buybox is a USED offer -> new price not available, not retrying")
-                            result["status"] = "used_offer"
-                            break
-                        print(f"⚠️ price not found & page not marked unavailable (attempt {attempt}/{MAX_ATTEMPTS})")
-                    except Exception as e:
-                        print(f"❌ Error processing URL {url} (attempt {attempt}/{MAX_ATTEMPTS}): {e}")
-                        result = {"url": url, "file": None, "price": None, "model": None, "status": f"error: {e}"}
-                    finally:
-                        if page:
-                            try:
-                                await page.close()
-                            except Exception:
-                                pass
-                    # reached only when the attempt was transient (no break)
-                    if attempt < MAX_ATTEMPTS:
-                        print(f"🔁 retrying in {AMAZON_RETRY_BACKOFF_SEC}s ...")
-                        await asyncio.sleep(AMAZON_RETRY_BACKOFF_SEC)
-
-                results.append(result)
-
-                # Politeness gap between consecutive Amazon URLs (this url is
-                # done; wait before starting the next one). Skipped after the
-                # final url, since nothing follows it. The empty-slot branch
-                # above `continue`s before reaching here, which is correct: it
-                # makes no network request, so it needs no gap.
-                if idx < len(urls):
-                    print(f"⏳ waiting {AMAZON_BETWEEN_URL_GAP_SEC}s before the next Amazon URL ...")
-                    await asyncio.sleep(AMAZON_BETWEEN_URL_GAP_SEC)
-
-            # Cookies are intentionally NOT saved: the session is discarded
-            # when the browser closes below.
-
-        finally:
-            await browser.close()
-
-    return results
-
-def parse_amazon_html(html_file_path="amazon.html", expected_url=None):
-    """Return (price_text_or_None, redirected_bool).
-
-    - Redirect: compare requested ASIN vs the page's canonical link.
-    - Price: scoped to the MAIN price container (corePriceDisplay / priceToPay)
-      so we don't pick up sponsored/related prices elsewhere on the page.
-    """
-    if not os.path.exists(html_file_path):
-        print(f"Error: HTML file '{html_file_path}' not found.")
-        return None, False
-
-    with open(html_file_path, "r", encoding="utf-8", errors="ignore") as file:
-        html_content = file.read()
-
-    # -------- REDIRECT DETECTION --------
-    expected_asin = amazon_id_from_url(expected_url) if expected_url else None
-    canonical = get_canonical_href(html_content)
-    if expected_asin and canonical:
-        can_asin = amazon_id_from_url(canonical)
-        if can_asin and can_asin != expected_asin:
-            print(f"[REDIRECT] requested {expected_asin} but page is {can_asin} -> not available")
-            return None, True
-
-    soup = BeautifulSoup(html_content, "lxml")
-
-    # -------- PRICE EXTRACTION (scoped to the main buybox price container) --------
-    price = None
-    core = (soup.find(id="corePriceDisplay_desktop_feature_div")
-            or soup.find(id="corePrice_feature_div")
-            or soup.find(id="apex_desktop"))
-    if core:
-        pt = (core.find(class_="priceToPay")
-              or core.find(class_="apexPriceToPay")
-              or core)
-        price_whole = pt.find("span", {"class": "a-price-whole"})
-        price_fraction = pt.find("span", {"class": "a-price-fraction"})
-        if price_whole:
-            whole = re.sub(r"[^\d,]", "", price_whole.get_text())
-            frac = re.sub(r"[^\d]", "", price_fraction.get_text()) if price_fraction else "00"
-            price = f"{whole}.{frac or '00'}"
-        else:
-            for off in pt.find_all("span", {"class": "a-offscreen"}):
-                t = off.get_text(strip=True)
-                if t:
-                    price = t
-                    break
-
-    # -------- USED-OFFER GUARD --------
-    # If the featured buybox is a USED/renewed device, the price we just read is
-    # the USED price. We only track NEW-device prices, so discard it.
-    if price and _amazon_buybox_is_used(html_content):
-        print(f"⚠️ buybox is a USED offer (price {price}) -> discarding, new price not available")
-        price = None
-
-    if price:
-        print(f"The price of the product is: {price}")
-    else:
-        print("Price not found in the HTML file.")
-
-    return price, False
-
-
-# -----------------------
-# APIFY (BestBuy + Lowes)
-# -----------------------
-# BestBuy and Lowes are fetched through Apify actors instead of our own
-# browser. Each site is ONE actor run that takes every URL at once:
+# Amazon, BestBuy and Lowes are fetched through Apify actors instead of our
+# own browser. Each site is ONE actor run that takes every URL at once:
+#   Amazon : delicious_zebu/amazon-product-details-scraper  (APIFY_AMAZON_ACTOR)
 #   BestBuy: benthepythondev/bestbuy-scraper                (APIFY_BESTBUY_ACTOR)
 #   Lowes  : dami_studio/lowes-scraper                      (APIFY_LOWES_ACTOR)
-# (Amazon, Samsung and Walmart are still scraped with Playwright.)
+# (Samsung and Walmart are still scraped with Playwright.)
 #
 # Tokens: env var APIFY_API_TOKENS (a GitHub Actions secret), several tokens
 # separated by commas or newlines. They are used strictly in order; a token is
@@ -797,6 +560,7 @@ def parse_amazon_html(html_file_path="amazon.html", expected_url=None):
 #   price = None              -> no data at all (empty slot / Apify failed) -> blank
 
 APIFY_API_BASE = "https://api.apify.com/v2"
+APIFY_AMAZON_ACTOR = "U3DyJ7kdhQlYyeQKd"    # delicious_zebu/amazon-product-details-scraper
 APIFY_BESTBUY_ACTOR = "pbUZ4z2ORsyKhZshL"   # benthepythondev/bestbuy-scraper
 APIFY_LOWES_ACTOR = "Hchq3U0V6uJTxJax0"     # dami_studio/lowes-scraper
 
@@ -925,7 +689,7 @@ class ApifyTokenPool:
         raw = os.environ.get("APIFY_API_TOKENS") or os.environ.get("APIFY_API_TOKEN") or ""
         tokens = [t for t in re.split(r"[\s,;]+", raw) if t]
         if not tokens:
-            print("⚠️ APIFY_API_TOKENS is not set -> BestBuy and Lowes will be left blank")
+            print("⚠️ APIFY_API_TOKENS is not set -> Amazon, BestBuy and Lowes will be left blank")
         else:
             print(f"🔑 {len(tokens)} Apify token(s) loaded")
         return cls(tokens)
@@ -1034,6 +798,90 @@ def _save_apify_items(items_by_key, site, output_dir):
     except Exception as e:
         print(f"⚠️ could not save raw {site} data: {e}")
         return None
+
+
+# -----------------------
+# AMAZON-specific logic (via Apify)
+# -----------------------
+def _amazon_item_is_used(item):
+    """True when the buybox offer is a USED / renewed device (we only track NEW).
+
+    The actor has no condition field; Amazon's used/warehouse seller is
+    "Amazon Resale", and renewed listings say so in the seller or title.
+    """
+    seller = " ".join(str(item.get(k) or "") for k in ("seller_name", "ships_from"))
+    title = str(item.get("title") or "")
+    return bool(re.search(r"\b(resale|renewed|used)\b", seller, re.I)
+                or re.search(r"\brenewed\b", title, re.I))
+
+
+def _amazon_item_price(item):
+    """Buybox price as text, or None."""
+    pv = item.get("price_value")
+    if isinstance(pv, (int, float)) and pv > 0:
+        return f"{pv:.2f}"
+    num = clean_price_value(item.get("price"))
+    return f"{num:.2f}" if num and num > 0 else None
+
+
+def _amazon_item_done(item):
+    """Whether this record is a final answer (else the URL is re-run)."""
+    return bool(_amazon_item_price(item)
+                or _looks_unavailable(str(item.get("availability") or ""), "amazon")
+                or _amazon_item_is_used(item))
+
+
+def fetch_amazon_via_apify(urls, pool, output_dir="outputs"):
+    """Amazon price per URL via the Apify actor. Returns results in URL order."""
+    keyed = {u: u for u in dict.fromkeys(u.strip() for u in urls if u and u.strip())}
+    asin_to_url = {amazon_id_from_url(u): u for u in keyed if amazon_id_from_url(u)}
+
+    def build_input(todo):
+        return {"Params": todo, "deliverTo": "US", "zipCode": "10001"}
+
+    def item_key(item):
+        # search_source echoes the URL we sent; fall back to the ASIN
+        src = str(item.get("search_source") or "").strip()
+        if src in keyed:
+            return src
+        return asin_to_url.get(str(item.get("asin") or "").upper())
+
+    found = {}
+    if keyed and pool.tokens:
+        found = _apify_collect(pool, "Amazon", APIFY_AMAZON_ACTOR, keyed,
+                               build_input, item_key, _amazon_item_done)
+        _save_apify_items(found, "Amazon", output_dir)
+
+    results = []
+    for idx, url in enumerate(urls, start=1):
+        if not url or not url.strip():
+            print(f"[Amazon {idx}/{len(urls)}] empty URL slot -> skipping")
+            results.append({"url": url, "file": None, "price": None, "model": None, "status": "empty"})
+            continue
+        item = found.get(url.strip())
+        if item is None:
+            print(f"[Amazon {idx}/{len(urls)}] ❌ no data from Apify -> left blank")
+            results.append({"url": url, "file": None, "price": None, "model": None, "status": "error: no data from Apify"})
+            continue
+
+        expected = amazon_id_from_url(url)
+        got = str(item.get("asin") or "").upper() or None
+        price = _amazon_item_price(item)
+        if expected and got and got != expected:
+            print(f"[Amazon {idx}/{len(urls)}] [REDIRECT] requested {expected} but got {got} -> not available")
+            result = {"price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "redirect"}
+        elif _amazon_item_is_used(item):
+            print(f"[Amazon {idx}/{len(urls)}] buybox is a USED offer (seller {item.get('seller_name')!r}) -> not available")
+            result = {"price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "used_offer"}
+        elif price:
+            print(f"[Amazon {idx}/{len(urls)}] ✅ price {price} ({item.get('availability')})")
+            # SKU_Amazon is filled by the writer from the slot's Samsung SM code
+            result = {"price": price, "model": None, "status": "ok"}
+        else:
+            print(f"[Amazon {idx}/{len(urls)}] no price ({item.get('availability')!r}) -> not available")
+            result = {"price": NOT_AVAILABLE, "model": NOT_AVAILABLE, "status": "no_price"}
+        results.append({"url": url, "file": None, **result})
+    return results
 
 
 # -----------------------
@@ -1542,12 +1390,13 @@ async def save_samsung_htmls(
 # -----------------------
 # (Lowes used to share this browser flow; it now comes from Apify, see the
 # LOWES-specific logic section.)
-# Walmart is scraped with the same flow as Amazon (load -> wait -> human-like
+# Walmart is scraped with the flow the old browser-based Amazon scraper used
+# (load -> wait -> human-like
 # mouse/scroll -> save HTML -> parse saved HTML -> retry transient failures),
 # with the same timings: goto wait_until="load" / 30s cap, 10s settle wait,
 # 3-6s random wait, 20s retry backoff, 20s gap between URLs.
 #
-# Differences from Amazon (verified by testing against the live US site):
+# Differences from that Amazon flow (verified against the live US site):
 #   - Fresh session for EVERY url AND every retry: each attempt launches a new
 #     real Chrome process with a brand-new throwaway profile (via
 #     _launch_chrome_cdp, the BestBuy launcher). Nothing is shared between
@@ -1869,14 +1718,15 @@ async def main():
     "",
     ]
 
-    print("\n=== Running Amazon scraper ===")
-    am_res = await save_amazon_htmls(amazon_urls, output_dir="outputs", cookies_file="amazon_cookies.json", headless=True)
+    # Amazon, BestBuy and Lowes via Apify (one shared token pool, so a token
+    # that runs out during Amazon is not tried again for BestBuy / Lowes)
+    apify_pool = ApifyTokenPool.from_env()
+
+    print("\n=== Running Amazon (Apify) ===")
+    am_res = fetch_amazon_via_apify(amazon_urls, apify_pool, output_dir="outputs")
     print("\nAmazon Summary:")
     for r in am_res:
         print(r)
-
-    # BestBuy via Apify (tokens from the APIFY_API_TOKENS env var)
-    apify_pool = ApifyTokenPool.from_env()
 
     print("\n=== Running BestBuy (Apify) ===")
     bb_res = fetch_bestbuy_via_apify(bestbuy_urls, apify_pool, output_dir="outputs")
