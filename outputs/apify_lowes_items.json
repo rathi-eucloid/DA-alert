@@ -34,15 +34,15 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 183,
+        "quantity": 181,
         "onHandQuantity": 0,
-        "leadTimeDays": 8,
+        "leadTimeDays": 7,
         "storeNumber": "3461"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 299,
+        "quantity": 297,
         "onHandQuantity": 0,
         "leadTimeDays": 1,
         "storeNumber": "3461"
@@ -134,7 +134,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-10-05T17:43:27.589Z",
+    "scrapedAt": "2026-10-06T07:09:29.089Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -264,7 +264,7 @@
         "available": true,
         "quantity": 6,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -362,7 +362,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-10-05T17:43:09.306Z",
+    "scrapedAt": "2026-10-06T07:09:26.220Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -490,15 +490,15 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 66,
+        "quantity": 65,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 66,
+        "quantity": 65,
         "onHandQuantity": 0,
         "leadTimeDays": 15,
         "storeNumber": "149"
@@ -590,7 +590,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-10-05T17:43:43.004Z",
+    "scrapedAt": "2026-10-06T07:09:19.900Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -718,15 +718,15 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 44,
+        "quantity": 41,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 44,
+        "quantity": 41,
         "onHandQuantity": 0,
         "leadTimeDays": 15,
         "storeNumber": "149"
@@ -818,7 +818,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-10-05T17:43:09.941Z",
+    "scrapedAt": "2026-10-06T07:09:20.573Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -948,7 +948,7 @@
         "available": true,
         "quantity": 3,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -1043,7 +1043,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-10-05T17:43:10.444Z",
+    "scrapedAt": "2026-10-06T07:09:21.283Z",
     "weight": 357,
     "dimensions": {
       "depth": {
