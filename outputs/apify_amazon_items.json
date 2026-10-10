@@ -7,11 +7,11 @@
     "brand_name": "Samsung",
     "brand_page_url": "",
     "breadcrumbs": "",
-    "price": "$2,084.34",
-    "price_value": 2084.34,
+    "price": "$1,997.59",
+    "price_value": 1997.59,
     "currency": "USD",
     "list_price": "$2,225.00",
-    "discount_percent": "-6%",
+    "discount_percent": "-10%",
     "unit_price": "",
     "subscribe_save_price": "",
     "coupon": "",
@@ -31,17 +31,17 @@
       "Color: Stainless Steel"
     ],
     "variants": [],
-    "availability": "Only 10 left in stock - order soon.",
-    "delivery_date": "October 13 - 14",
+    "availability": "Only 8 left in stock - order soon.",
+    "delivery_date": "October 14 - 15",
     "fastest_delivery_date": "",
     "ships_from": "AAA_Appliance",
     "seller_name": "AAA_Appliance",
     "seller_page_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A10HLORM3B3SKO&asin=B0BN4XG1Y2&ref_=dp_merchant_link",
     "returns": "30-day refund/replacement",
     "other_sellers": {
-      "text": "New (6) from $2,084.34 & FREE Delivery",
+      "text": "New (6) from $1,997.59 & FREE Delivery",
       "count": 6,
-      "from_price": "$2,084.34",
+      "from_price": "$1,997.59",
       "url": "https://www.amazon.com/gp/offer-listing/B0BN4XG1Y2/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
     },
     "images": [
@@ -57,19 +57,43 @@
     ],
     "videos": [
       {
-        "title": "Real mom fridge review!",
-        "duration_seconds": 280,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/279a4609-12f5-47de-9d63-c61d91feeb7d/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61Dz5cqXxcL.jpg",
-        "creator": "⭐️ Reviews by Megan ⭐️ @primeandparenting",
+        "title": "I love my Samsung bespoke refrigerator",
+        "duration_seconds": 109,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/885b85eb-f80e-4513-9b4c-125ac786d63e/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/81-EPe1xzFL.jpg",
+        "creator": "Ashley Campbell",
         "creator_type": "Influencer"
       },
       {
-        "title": "Best Refrigerator Obsessed",
-        "duration_seconds": 128,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/26bcdcd7-fa4e-40df-bab5-62604f8ff99e/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61o7QwbrgFL.jpg",
-        "creator": "Love Yoga Life - Megan",
+        "title": "We love our modern Samsung fridge",
+        "duration_seconds": 19,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5ea7adc5-bb62-40c8-b534-38204f3987ad/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/A1DfG85ETTL.jpg",
+        "creator": "MS. B's Favorite Exotic Thingz",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Sleek stylish fridge is more like usable art! Check it out",
+        "duration_seconds": 184,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/35361e4e-56a5-48d6-b0d4-7be91b7ae74b/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/815YOpyVP6L.jpg",
+        "creator": "DeMaria Duo",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Honest Review of Samsung French Door Refrigerator",
+        "duration_seconds": 152,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/89846df3-e4f6-46f1-84f7-2f2b901b91db/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/41nI18UavzL.jpg",
+        "creator": "emily.hartsfield",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "We love this fridge!!!!",
+        "duration_seconds": 58,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/07dfebe3-6132-40f8-a906-ea27702f698c/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/B1hdaDutHhL.png",
+        "creator": "Sara Keegan",
         "creator_type": "Influencer"
       },
       {
@@ -89,51 +113,27 @@
         "creator_type": "Influencer"
       },
       {
-        "title": "Honest Reveiw for Refrigerator- 2 Types of Ice, 4 Doors, ect",
-        "duration_seconds": 136,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/fcfaa4cc-3143-4a0a-8b36-3c5531467988/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/B1OxIVXqU2L.png",
-        "creator": "Starr Lorain Store",
+        "title": "Beverage center feature is amazing",
+        "duration_seconds": 98,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8103a641-8c38-4921-9525-1683deb3f0f0/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/71Pv9wnPXNL.jpg",
+        "creator": "Kasey Petersen",
         "creator_type": "Influencer"
       },
       {
-        "title": "We love our modern Samsung fridge",
-        "duration_seconds": 19,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5ea7adc5-bb62-40c8-b534-38204f3987ad/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/A1DfG85ETTL.jpg",
-        "creator": "MS. B's Favorite Exotic Thingz",
+        "title": "Fridge w/2 sizes of ice, beverage center, autofill pitcher",
+        "duration_seconds": 253,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/04a47630-1b07-4de7-8658-6be76eebfc02/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/611wOYa6AiL.jpg",
+        "creator": "Mindy Puderbaugh",
         "creator_type": "Influencer"
       },
       {
-        "title": "Beautiful, spacious, and functional refrigerator!",
-        "duration_seconds": 55,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/94d25557-bb4f-4d27-9a5f-9492f3fdd276/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/713h-La-1eL.png",
-        "creator": "Brittany Yeargan",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Refrigerator unboxing and review",
-        "duration_seconds": 137,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/080391f7-7880-4b6d-a37e-9041c9bbf52b/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/A1NOhbQkc1L.png",
-        "creator": "Rosalee Johnson",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Review after 2 years using this 29 cubic foot Refrigerator",
-        "duration_seconds": 146,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7ccf24a0-6aaa-4535-bae7-052d14a58917/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61KMa0rhzTL.jpg",
-        "creator": "Tracey & Brayden",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Chill out with this sleek fridge!",
-        "duration_seconds": 145,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f4ab405c-f847-43bb-b350-fe7390c3b454/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/A1KPYfuf2YL.jpg",
-        "creator": "Kathy Hurtado",
+        "title": "Looking for an UPDATED large fridge? This one is amazing!!",
+        "duration_seconds": 155,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5e42551b-638a-4119-8d1c-f8d7ac6c6a68/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/51FnmIMTxHL.jpg",
+        "creator": "Amy",
         "creator_type": "Influencer"
       }
     ],
@@ -282,7 +282,7 @@
         "body": "Unreliable! Failed two months after purchase!"
       }
     ],
-    "scrape_time": "2026-10-10 00:45"
+    "scrape_time": "2026-10-10 09:28"
   },
   "https://www.amazon.com/dp/B0BDKG5H98?lv=shuf&channelId=500&plpRedirect=mhFallback": {
     "search_source": "https://www.amazon.com/dp/B0BDKG5H98?lv=shuf&channelId=500&plpRedirect=mhFallback",
@@ -292,8 +292,8 @@
     "brand_name": "Samsung",
     "brand_page_url": "",
     "breadcrumbs": "",
-    "price": "$2,399.00",
-    "price_value": 2399,
+    "price": "",
+    "price_value": null,
     "currency": "USD",
     "list_price": "",
     "discount_percent": "",
@@ -316,13 +316,13 @@
       "Color: White Glass"
     ],
     "variants": [],
-    "availability": "Only 19 left in stock - order soon.",
-    "delivery_date": "Wednesday, October 21",
-    "fastest_delivery_date": "Sunday, October 11",
-    "ships_from": "Inventure Solutions LLC",
-    "seller_name": "Inventure Solutions LLC",
-    "seller_page_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A9VH8JZ6JRILT&asin=B0BDKG5H98&ref_=dp_merchant_link",
-    "returns": "30-day refund/replacement",
+    "availability": "",
+    "delivery_date": "",
+    "fastest_delivery_date": "",
+    "ships_from": "",
+    "seller_name": "",
+    "seller_page_url": "",
+    "returns": "",
     "other_sellers": {},
     "images": [
       "https://m.media-amazon.com/images/I/31kC4IHM1LL._AC_SL1000_.jpg",
@@ -330,59 +330,11 @@
     ],
     "videos": [
       {
-        "title": "WATCH BEFORE YOU BUY- is this fridge worth the price??",
-        "duration_seconds": 57,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/331f93be-805d-471b-8109-288c258d8327/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/617Ahl7llVL.jpg",
-        "creator": "✅ Natalie M",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Real mom fridge review!",
-        "duration_seconds": 280,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/279a4609-12f5-47de-9d63-c61d91feeb7d/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61Dz5cqXxcL.jpg",
-        "creator": "⭐️ Reviews by Megan ⭐️ @primeandparenting",
-        "creator_type": "Influencer"
-      },
-      {
         "title": "The most customizable fridge so sleek with built in pitcher",
         "duration_seconds": 207,
         "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/cb849462-4cf8-412f-9bc6-5dbab312a587/default.vertical.jobtemplate.hls.m3u8",
         "thumbnail": "https://m.media-amazon.com/images/I/71qyqXOk8-L.jpg",
         "creator": "Kelsey Poulsen",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "1 year review: Samsung 29 Cu.Ft white glass refrigerator",
-        "duration_seconds": 46,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0ae81335-c301-4141-9678-2e4d9ad495fa/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/A1QcQkcC4lL.png",
-        "creator": "Jane",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Fridge of my dreams",
-        "duration_seconds": 56,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/125ffcf1-9122-4609-a16f-6c8d8c90c65b/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/51fivNlWMnL.jpg",
-        "creator": "Mishel",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Amazing fridge with tons of storage!!",
-        "duration_seconds": 51,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f869179a-72c4-4daa-990a-08381c234d1b/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61Aj8NYArkL.jpg",
-        "creator": "Candi Jobe",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "A glass fridge with a secret door",
-        "duration_seconds": 141,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ea8c8916-ef38-4fa7-91d1-4532fdf9f9f0/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61dGXOEUtJL.jpg",
-        "creator": "OT Focus",
         "creator_type": "Influencer"
       },
       {
@@ -399,6 +351,62 @@
         "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d48759d1-a949-4f13-8665-4a1e4e99435f/default.jobtemplate.hls.m3u8",
         "thumbnail": "https://m.media-amazon.com/images/I/51e8eLukmVL.jpg",
         "creator": "Yizzy",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "A glass fridge with a secret door",
+        "duration_seconds": 141,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ea8c8916-ef38-4fa7-91d1-4532fdf9f9f0/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/61dGXOEUtJL.jpg",
+        "creator": "OT Focus",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Amazing fridge with tons of storage!!",
+        "duration_seconds": 51,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f869179a-72c4-4daa-990a-08381c234d1b/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/61Aj8NYArkL.jpg",
+        "creator": "Candi Jobe",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "WATCH BEFORE YOU BUY- is this fridge worth the price??",
+        "duration_seconds": 57,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/331f93be-805d-471b-8109-288c258d8327/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/617Ahl7llVL.jpg",
+        "creator": "✅ Natalie M",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Up Close And Detailed Look Before You Buy!",
+        "duration_seconds": 110,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/40b2c19e-bf79-48bd-94ec-27eeff9ae47c/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/81i2wJI5klL.png",
+        "creator": "Kate Mercker",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Fridge of my dreams",
+        "duration_seconds": 56,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/125ffcf1-9122-4609-a16f-6c8d8c90c65b/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/51fivNlWMnL.jpg",
+        "creator": "Mishel",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "1 year review: Samsung 29 Cu.Ft white glass refrigerator",
+        "duration_seconds": 46,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0ae81335-c301-4141-9678-2e4d9ad495fa/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/A1QcQkcC4lL.png",
+        "creator": "Jane",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Real mom fridge review!",
+        "duration_seconds": 280,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/279a4609-12f5-47de-9d63-c61d91feeb7d/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/61Dz5cqXxcL.jpg",
+        "creator": "⭐️ Reviews by Megan ⭐️ @primeandparenting",
         "creator_type": "Influencer"
       }
     ],
@@ -498,7 +506,7 @@
         "body": "They are infamous for icemaker issues. Contacted customer service who admitted to knowing there's an issue but refused to make it right. Estimate to fix was $700"
       }
     ],
-    "scrape_time": "2026-10-10 00:45"
+    "scrape_time": "2026-10-10 09:30"
   },
   "https://www.amazon.com/dp/B0DDHV3FXZ?lv=shuf&language=es&channelId=500&plpRedirect=mhFallback": {
     "search_source": "https://www.amazon.com/dp/B0DDHV3FXZ?lv=shuf&language=es&channelId=500&plpRedirect=mhFallback",
@@ -536,7 +544,7 @@
     "delivery_date": "",
     "fastest_delivery_date": "",
     "ships_from": "",
-    "seller_name": "Frostronics Refrigeration Tech",
+    "seller_name": "",
     "seller_page_url": "",
     "returns": "",
     "other_sellers": {},
@@ -551,59 +559,11 @@
     ],
     "videos": [
       {
-        "title": "Do I Regret Getting This Samsung?",
-        "duration_seconds": 107,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7f69aae6-94d9-42d4-8678-b7de903dfc4e/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/81Sffih2zNL.png",
-        "creator": "Home Deals with Damon",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Spacious, Quiet, and So Easy to Organize",
-        "duration_seconds": 105,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a889af22-e733-4a80-97a1-1cbf4e77a1ba/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/91dgu1goC6L.jpg",
-        "creator": "✅ Jessica’s Curated Comforts & Clever Find",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "You just can not beat it. The best fridge we have ever had",
-        "duration_seconds": 31,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/04dd7b75-5e70-44e7-ab73-c3c25b779df0/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61ysrlyQ+RL.jpg",
-        "creator": "Jessica B",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Watch Before You Buy This Refrigerator!!",
-        "duration_seconds": 52,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8e05e4a8-b1b7-4707-893b-e1a6e50ea129/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/91UvLYMWlCL.jpg",
-        "creator": "Alena Torno",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "I love my Samsung bespoke refrigerator",
-        "duration_seconds": 109,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/885b85eb-f80e-4513-9b4c-125ac786d63e/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/81-EPe1xzFL.jpg",
-        "creator": "Ashley Campbell",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Smart Fridge with Flex Zones and Two types of Ice",
-        "duration_seconds": 61,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e0d1e47a-a200-490f-ba0c-c3340f741bb9/default.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/A1MiNM+aDYL.png",
-        "creator": "Rachel 🌸",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "I Am Still Head Over Heels For This Fridge (A Year Later!)",
-        "duration_seconds": 75,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/41b8418b-5ad7-4dac-a6b9-cdfba06e5d01/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/B14sCuYza4L.jpg",
-        "creator": "Amazon Finds With Megs",
+        "title": "I was so impressed by how much storage there was in this fridge",
+        "duration_seconds": 80,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3c4a8dd4-2624-448e-800e-592de12ea7b3/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/713J-le8ntL.jpg",
+        "creator": "Becca Sasser",
         "creator_type": "Influencer"
       },
       {
@@ -615,19 +575,67 @@
         "creator_type": "Influencer"
       },
       {
+        "title": "I love my Samsung bespoke refrigerator",
+        "duration_seconds": 109,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/885b85eb-f80e-4513-9b4c-125ac786d63e/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/81-EPe1xzFL.jpg",
+        "creator": "Ashley Campbell",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "I Am Still Head Over Heels For This Fridge (A Year Later!)",
+        "duration_seconds": 75,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/41b8418b-5ad7-4dac-a6b9-cdfba06e5d01/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/B14sCuYza4L.jpg",
+        "creator": "Amazon Finds With Megs",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "REVIEW - SAMSUNG 23 cf Counter Depth 4-Door Refrigerator",
+        "duration_seconds": 91,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/70bb12eb-d271-483b-a9c6-6b2a6de25dd7/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/81QfIldn8iL.jpg",
+        "creator": "Taresa Curtis",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "You just can not beat it. The best fridge we have ever had",
+        "duration_seconds": 31,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/04dd7b75-5e70-44e7-ab73-c3c25b779df0/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/61ysrlyQ+RL.jpg",
+        "creator": "Jessica B",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Sleek Smart Refrigerator I Chose for a Modern Kitchen",
+        "duration_seconds": 239,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a6f3faba-195a-4079-bf1f-b0197c4b2fc9/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/81bSPpynx8L.jpg",
+        "creator": "Everyday Home Tested",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Everything I wish I knew before buying this fridge!",
+        "duration_seconds": 102,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/99debfd1-a40d-40e0-b577-e75084bb1056/default.vertical.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/91AmXx33MxL.jpg",
+        "creator": "TheAmaZONE",
+        "creator_type": "Influencer"
+      },
+      {
+        "title": "Spacious, Quiet, and So Easy to Organize",
+        "duration_seconds": 105,
+        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a889af22-e733-4a80-97a1-1cbf4e77a1ba/default.jobtemplate.hls.m3u8",
+        "thumbnail": "https://m.media-amazon.com/images/I/91dgu1goC6L.jpg",
+        "creator": "✅ Jessica’s Curated Comforts & Clever Find",
+        "creator_type": "Influencer"
+      },
+      {
         "title": "Up close look at SAMSUNG fridge! See my 3 favorite features!",
         "duration_seconds": 190,
         "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/aa00c6f0-465b-46cf-8bd3-ffedcbb77c1a/default.jobtemplate.hls.m3u8",
         "thumbnail": "https://m.media-amazon.com/images/I/A16I47X5WcL.png",
         "creator": "Emily Bay",
-        "creator_type": "Influencer"
-      },
-      {
-        "title": "Love the drink station and TWO types of ICE!",
-        "duration_seconds": 114,
-        "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7a4440d5-5824-444c-bcf9-2f5de6a136b1/default.vertical.jobtemplate.hls.m3u8",
-        "thumbnail": "https://m.media-amazon.com/images/I/61J0ctMpAKL.jpg",
-        "creator": "Laura Martinez",
         "creator_type": "Influencer"
       }
     ],
@@ -736,6 +744,6 @@
         "body": "They are infamous for icemaker issues. Contacted customer service who admitted to knowing there's an issue but refused to make it right. Estimate to fix was $700"
       }
     ],
-    "scrape_time": "2026-10-10 00:46"
+    "scrape_time": "2026-10-10 09:30"
   }
 }
