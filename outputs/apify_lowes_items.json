@@ -34,7 +34,7 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 162,
+        "quantity": 159,
         "onHandQuantity": 0,
         "leadTimeDays": 6,
         "storeNumber": "3461"
@@ -42,9 +42,9 @@
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 268,
+        "quantity": 263,
         "onHandQuantity": 0,
-        "leadTimeDays": 1,
+        "leadTimeDays": 2,
         "storeNumber": "3461"
       },
       {
@@ -61,7 +61,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "3461",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 1,
+    "deliveryLeadTimeDays": 2,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
@@ -130,7 +130,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-10-14T14:52:51.887Z",
+    "scrapedAt": "2026-10-15T00:17:21.769Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -260,7 +260,7 @@
         "available": true,
         "quantity": 4,
         "onHandQuantity": 0,
-        "leadTimeDays": 20,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -268,7 +268,7 @@
         "available": true,
         "quantity": 4,
         "onHandQuantity": 0,
-        "leadTimeDays": 15,
+        "leadTimeDays": 16,
         "storeNumber": "149"
       },
       {
@@ -285,7 +285,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 15,
+    "deliveryLeadTimeDays": 16,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/2c0e5a2d-f0c9-4aa4-9da0-0ad554b04ec6/95295551.jpeg",
@@ -358,7 +358,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-10-14T14:52:51.678Z",
+    "scrapedAt": "2026-10-15T00:17:23.073Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -473,7 +473,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5702,
+    "reviewCount": 5708,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -486,17 +486,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 64,
+        "quantity": 62,
         "onHandQuantity": 0,
-        "leadTimeDays": 20,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 64,
+        "quantity": 62,
         "onHandQuantity": 0,
-        "leadTimeDays": 15,
+        "leadTimeDays": 16,
         "storeNumber": "149"
       },
       {
@@ -513,7 +513,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 15,
+    "deliveryLeadTimeDays": 16,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/152330d0-41f0-4cbd-be9a-70cec52ffe8c/65163496.jpg",
@@ -582,7 +582,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-10-14T14:52:53.490Z",
+    "scrapedAt": "2026-10-15T00:17:22.537Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -697,7 +697,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5702,
+    "reviewCount": 5708,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -710,17 +710,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 192,
+        "quantity": 189,
         "onHandQuantity": 0,
-        "leadTimeDays": 20,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 192,
+        "quantity": 189,
         "onHandQuantity": 0,
-        "leadTimeDays": 15,
+        "leadTimeDays": 16,
         "storeNumber": "149"
       },
       {
@@ -737,7 +737,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 15,
+    "deliveryLeadTimeDays": 16,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/4492f11d-a93a-4532-87e2-47345140ab93/65157286.jpg",
@@ -806,7 +806,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-10-14T14:52:52.570Z",
+    "scrapedAt": "2026-10-15T00:17:22.354Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -1025,7 +1025,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-10-14T14:52:52.581Z",
+    "scrapedAt": "2026-10-15T00:17:22.948Z",
     "weight": 357,
     "dimensions": {
       "depth": {
