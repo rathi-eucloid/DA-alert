@@ -18,7 +18,7 @@
     "condition": "new",
     "openBoxCondition": null,
     "source": "bestbuy",
-    "scrapedAt": "2026-10-20T00:53:52.674763+00:00",
+    "scrapedAt": "2026-10-20T14:38:01.632760+00:00",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6493/6493491_sd.jpg",
       "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6493/6493491_sd.jpg",
@@ -89,7 +89,6 @@
       "Minimum Operating Temperature": "50 degrees fahrenheit",
       "Maximum Operating Temperature": "110 degrees fahrenheit",
       "Configuration": "Freestanding",
-      "Panel Ready": "true",
       "Fingerprint Resistant": "true",
       "Panel(s) Included": "true",
       "Convertible Temperature Zone": "true",
@@ -100,8 +99,8 @@
       "Sabbath Mode": "true",
       "Defrost Type": "Frost free",
       "Hinge Setting": "Fixed left, Fixed right",
-      "Customizable Hardware": "Panel",
       "Wireless Connectivity": "Wi-Fi",
+      "Customizable Hardware": "Panel",
       "Ice Maker Location(s)": "Freezer",
       "Ice and Water Dispenser": "Water only",
       "Ice and Water Dispenser Location": "Internal",
@@ -165,7 +164,7 @@
     "condition": "new",
     "openBoxCondition": null,
     "source": "bestbuy",
-    "scrapedAt": "2026-10-20T00:53:53.204346+00:00",
+    "scrapedAt": "2026-10-20T14:38:02.085059+00:00",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/7b3caf1e-74af-4f13-898e-f4bbb97bf9b9.jpg",
       "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/7b3caf1e-74af-4f13-898e-f4bbb97bf9b9.jpg",
@@ -318,7 +317,7 @@
     "condition": "new",
     "openBoxCondition": null,
     "source": "bestbuy",
-    "scrapedAt": "2026-10-20T00:53:53.880209+00:00",
+    "scrapedAt": "2026-10-20T14:38:02.376661+00:00",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6493/6493532_sd.jpg",
       "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6493/6493532_sd.jpg",
@@ -461,7 +460,7 @@
     "condition": "new",
     "openBoxCondition": null,
     "source": "bestbuy",
-    "scrapedAt": "2026-10-20T00:53:54.346462+00:00",
+    "scrapedAt": "2026-10-20T14:38:02.597019+00:00",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6493/6493492_sd.jpg",
       "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/6493/6493492_sd.jpg",
@@ -605,7 +604,7 @@
     "condition": "new",
     "openBoxCondition": null,
     "source": "bestbuy",
-    "scrapedAt": "2026-10-20T00:53:54.703479+00:00",
+    "scrapedAt": "2026-10-20T14:38:02.872906+00:00",
     "images": [
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a970cf8b-326f-4777-94c3-6e5e87ebdb58.jpg",
       "https://pisces.bbystatic.com/prescaled/500/500/image2/BestBuy_US/images/products/a970cf8b-326f-4777-94c3-6e5e87ebdb58.jpg",
