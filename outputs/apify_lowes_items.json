@@ -6,17 +6,18 @@
     "brand": "Samsung",
     "title": "Bespoke AI Standard-Depth Beverage Center 29-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Bespoke-28-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-water-dispenser-and-Door-within-Door-Fingerprint-Resistant-Stainless-Steel-All-Panels-ENERGY-STAR/5013373117",
-    "price": 2299,
+    "price": 2399,
     "priceMax": null,
     "priceIsRange": false,
     "listPrice": 3399,
-    "savingsAmount": 1100,
-    "savingsPercent": 32,
-    "promotionEndsAt": "2026-10-21T23:59:00.000Z",
+    "savingsAmount": 1000,
+    "savingsPercent": 29,
+    "promotionEndsAt": "2026-10-28T23:59:00.000Z",
     "priceScope": "STORE",
     "isDealOfTheDay": false,
     "promotions": [
-      "Delivery"
+      "Delivery",
+      "Free Delivery"
     ],
     "freeShipping": null,
     "availabilityMessage": null,
@@ -34,9 +35,9 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 179,
+        "quantity": 180,
         "onHandQuantity": 0,
-        "leadTimeDays": 6,
+        "leadTimeDays": 7,
         "storeNumber": "3461"
       },
       {
@@ -44,7 +45,7 @@
         "available": true,
         "quantity": 234,
         "onHandQuantity": 0,
-        "leadTimeDays": 2,
+        "leadTimeDays": 1,
         "storeNumber": "3461"
       },
       {
@@ -61,15 +62,15 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "3461",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 2,
+    "deliveryLeadTimeDays": 1,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
     "images": [
       "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
       "https://mobileimages.lowes.com/productimages/6de700a6-ccb8-405e-8d3c-c2dd3678d199/71407687.jpeg",
+      "https://mobileimages.lowes.com/productimages/1307fdfb-e612-405b-99a4-c92d5ab05d55/104506355.jpeg",
       "https://mobileimages.lowes.com/productimages/ce2699b7-da82-4704-98a5-12234923d1b2/47986233.jpg",
-      "https://mobileimages.lowes.com/productimages/9d684954-2321-4e44-94dc-1ed2a4920e17/97985132.jpeg",
       "https://mobileimages.lowes.com/productimages/1f350916-c583-40c9-8ba8-4022cb3f3e55/89597116.jpeg",
       "https://mobileimages.lowes.com/productimages/58d52e2e-a052-4475-8dcc-df70474a2e5f/68243354.jpeg",
       "https://mobileimages.lowes.com/productimages/6d59fc49-7b1e-416d-aee0-a51e02f09168/47986231.jpg",
@@ -130,7 +131,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-10-22T00:24:12.848Z",
+    "scrapedAt": "2026-10-22T14:51:48.757Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -230,20 +231,20 @@
     "brand": "Samsung",
     "title": "Bespoke AI Standard-Depth Family Hub 32\" 29-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Charcoal Glass Top with Stainless Steel Bottom Panels ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-29-cu-ft-Bespoke-4-Door-French-Door-Refrigerator-with-AI-Family-Hub-in-Charcoal-Glass-and-Stainless-Steel/5016101863",
-    "price": 3499,
+    "price": 3599,
     "priceMax": null,
     "priceIsRange": false,
     "listPrice": 4699,
-    "savingsAmount": 1200,
-    "savingsPercent": 25,
-    "promotionEndsAt": "2026-10-21T23:59:00.000Z",
+    "savingsAmount": 1100,
+    "savingsPercent": 23,
+    "promotionEndsAt": "2026-10-28T23:59:00.000Z",
     "priceScope": "SOS",
     "isDealOfTheDay": false,
     "promotions": [],
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.7,
-    "reviewCount": 954,
+    "reviewCount": 956,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -291,7 +292,7 @@
       "https://mobileimages.lowes.com/productimages/2c0e5a2d-f0c9-4aa4-9da0-0ad554b04ec6/95295551.jpeg",
       "https://mobileimages.lowes.com/productimages/ee200d70-cd20-454b-a29c-b8e454faaf23/67111658.jpeg",
       "https://mobileimages.lowes.com/productimages/1f350916-c583-40c9-8ba8-4022cb3f3e55/89597116.jpeg",
-      "https://mobileimages.lowes.com/productimages/9d684954-2321-4e44-94dc-1ed2a4920e17/97985132.jpeg",
+      "https://mobileimages.lowes.com/productimages/1307fdfb-e612-405b-99a4-c92d5ab05d55/104506355.jpeg",
       "https://mobileimages.lowes.com/productimages/28d52aee-0f38-435b-9b9f-bc08679c847e/69927017.jpeg",
       "https://mobileimages.lowes.com/productimages/5800dcb0-fcd5-4904-b885-7e55f4bd2383/69949719.gif",
       "https://mobileimages.lowes.com/productimages/b078c908-5526-4b4c-9268-08c164744475/95295858.jpeg",
@@ -356,7 +357,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-10-22T00:24:12.795Z",
+    "scrapedAt": "2026-10-22T14:51:27.438Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -456,17 +457,18 @@
     "brand": "Samsung",
     "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( White Glass ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Counter-depth-22-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-Door-within-Door-White-Glass-All-Panels-ENERGY-STAR/5013377721",
-    "price": 2399,
+    "price": 2499,
     "priceMax": null,
     "priceIsRange": false,
     "listPrice": 3499,
-    "savingsAmount": 1100,
-    "savingsPercent": 31,
-    "promotionEndsAt": "2026-10-21T23:59:00.000Z",
+    "savingsAmount": 1000,
+    "savingsPercent": 28,
+    "promotionEndsAt": "2026-10-28T23:59:00.000Z",
     "priceScope": "SOS",
     "isDealOfTheDay": false,
     "promotions": [
-      "Delivery"
+      "Delivery",
+      "Free Delivery"
     ],
     "freeShipping": null,
     "availabilityMessage": null,
@@ -484,17 +486,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 48,
+        "quantity": 47,
         "onHandQuantity": 0,
-        "leadTimeDays": 21,
+        "leadTimeDays": 20,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 48,
+        "quantity": 47,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -511,7 +513,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/152330d0-41f0-4cbd-be9a-70cec52ffe8c/65163496.jpg",
@@ -520,7 +522,7 @@
       "https://mobileimages.lowes.com/productimages/ce276740-3828-48db-9e95-bbdca6d6bf25/70966828.jpeg",
       "https://mobileimages.lowes.com/productimages/942bf967-1862-4467-8cac-e10639b1f173/48321616.jpg",
       "https://mobileimages.lowes.com/productimages/1f350916-c583-40c9-8ba8-4022cb3f3e55/89597116.jpeg",
-      "https://mobileimages.lowes.com/productimages/9d684954-2321-4e44-94dc-1ed2a4920e17/97985132.jpeg",
+      "https://mobileimages.lowes.com/productimages/1307fdfb-e612-405b-99a4-c92d5ab05d55/104506355.jpeg",
       "https://mobileimages.lowes.com/productimages/1db4065f-b4f8-4255-8853-86868f39f91e/68243570.jpeg",
       "https://mobileimages.lowes.com/productimages/58d52e2e-a052-4475-8dcc-df70474a2e5f/68243354.jpeg",
       "https://mobileimages.lowes.com/productimages/e89aa426-eb89-4b09-a602-300937f1de48/48044525.jpg",
@@ -580,7 +582,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-10-22T00:24:12.923Z",
+    "scrapedAt": "2026-10-22T14:51:48.671Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -680,17 +682,18 @@
     "brand": "Samsung",
     "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Counter-depth-22-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-Door-within-Door-Stainless-Steel-All-Panels-ENERGY-STAR/5013380587",
-    "price": 2399,
+    "price": 2499,
     "priceMax": null,
     "priceIsRange": false,
     "listPrice": 3499,
-    "savingsAmount": 1100,
-    "savingsPercent": 31,
-    "promotionEndsAt": "2026-10-21T23:59:00.000Z",
+    "savingsAmount": 1000,
+    "savingsPercent": 28,
+    "promotionEndsAt": "2026-10-28T23:59:00.000Z",
     "priceScope": "SOS",
     "isDealOfTheDay": false,
     "promotions": [
-      "Delivery"
+      "Delivery",
+      "Free Delivery"
     ],
     "freeShipping": null,
     "availabilityMessage": null,
@@ -708,17 +711,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 192,
+        "quantity": 188,
         "onHandQuantity": 0,
-        "leadTimeDays": 21,
+        "leadTimeDays": 20,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 192,
+        "quantity": 188,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -735,7 +738,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/4492f11d-a93a-4532-87e2-47345140ab93/65157286.jpg",
@@ -744,7 +747,7 @@
       "https://mobileimages.lowes.com/productimages/ce276740-3828-48db-9e95-bbdca6d6bf25/70966828.jpeg",
       "https://mobileimages.lowes.com/productimages/120f4857-6c75-464e-8a38-c2e8c5f7ebea/48044192.jpg",
       "https://mobileimages.lowes.com/productimages/1f350916-c583-40c9-8ba8-4022cb3f3e55/89597116.jpeg",
-      "https://mobileimages.lowes.com/productimages/9d684954-2321-4e44-94dc-1ed2a4920e17/97985132.jpeg",
+      "https://mobileimages.lowes.com/productimages/1307fdfb-e612-405b-99a4-c92d5ab05d55/104506355.jpeg",
       "https://mobileimages.lowes.com/productimages/1db4065f-b4f8-4255-8853-86868f39f91e/68243570.jpeg",
       "https://mobileimages.lowes.com/productimages/58d52e2e-a052-4475-8dcc-df70474a2e5f/68243354.jpeg",
       "https://mobileimages.lowes.com/productimages/6d027c6b-90dc-471a-8759-c60404140bc8/48044336.jpg",
@@ -804,7 +807,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-10-22T00:24:13.922Z",
+    "scrapedAt": "2026-10-22T14:51:28.285Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -910,7 +913,7 @@
     "listPrice": 2999,
     "savingsAmount": 800,
     "savingsPercent": 26,
-    "promotionEndsAt": "2026-10-21T23:59:00.000Z",
+    "promotionEndsAt": "2026-10-28T23:59:00.000Z",
     "priceScope": "STORE",
     "isDealOfTheDay": false,
     "promotions": [],
@@ -965,7 +968,7 @@
       "https://mobileimages.lowes.com/productimages/45bec465-0505-4dc6-8936-51cbb8355a57/69662792.jpeg",
       "https://mobileimages.lowes.com/productimages/d29539fe-95ca-47ee-8fdb-108f8560305e/69662793.jpeg",
       "https://mobileimages.lowes.com/productimages/1f350916-c583-40c9-8ba8-4022cb3f3e55/89597116.jpeg",
-      "https://mobileimages.lowes.com/productimages/9d684954-2321-4e44-94dc-1ed2a4920e17/97985132.jpeg",
+      "https://mobileimages.lowes.com/productimages/1307fdfb-e612-405b-99a4-c92d5ab05d55/104506355.jpeg",
       "https://mobileimages.lowes.com/productimages/87576e6f-a9ec-40ce-ba18-de8a52c6ada5/72783518.jpeg",
       "https://mobileimages.lowes.com/productimages/feed3396-89a3-4aef-811e-4e3a1cd771eb/69662794.jpeg",
       "https://mobileimages.lowes.com/productimages/ac1132b5-c2c2-4875-9ea4-db265d0488df/70120294.jpeg",
@@ -1023,7 +1026,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-10-22T00:24:13.568Z",
+    "scrapedAt": "2026-10-22T14:51:29.321Z",
     "weight": 357,
     "dimensions": {
       "depth": {
