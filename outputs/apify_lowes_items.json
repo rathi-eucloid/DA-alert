@@ -22,7 +22,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5738,
+    "reviewCount": 5747,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -35,7 +35,7 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 182,
+        "quantity": 181,
         "onHandQuantity": 0,
         "leadTimeDays": 5,
         "storeNumber": "3461"
@@ -43,9 +43,9 @@
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 224,
+        "quantity": 221,
         "onHandQuantity": 0,
-        "leadTimeDays": 1,
+        "leadTimeDays": 2,
         "storeNumber": "3461"
       },
       {
@@ -62,7 +62,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "3461",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 1,
+    "deliveryLeadTimeDays": 2,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
@@ -131,7 +131,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-10-24T13:49:27.039Z",
+    "scrapedAt": "2026-10-24T23:57:46.949Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -244,7 +244,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.7,
-    "reviewCount": 958,
+    "reviewCount": 961,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -357,7 +357,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-10-24T13:49:30.308Z",
+    "scrapedAt": "2026-10-24T23:57:46.575Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -473,7 +473,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5738,
+    "reviewCount": 5747,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -486,17 +486,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 43,
+        "quantity": 42,
         "onHandQuantity": 0,
-        "leadTimeDays": 20,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 43,
+        "quantity": 42,
         "onHandQuantity": 0,
-        "leadTimeDays": 15,
+        "leadTimeDays": 16,
         "storeNumber": "149"
       },
       {
@@ -513,7 +513,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 15,
+    "deliveryLeadTimeDays": 16,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/152330d0-41f0-4cbd-be9a-70cec52ffe8c/65163496.jpg",
@@ -582,7 +582,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-10-24T13:49:27.655Z",
+    "scrapedAt": "2026-10-24T23:57:46.715Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -698,7 +698,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5738,
+    "reviewCount": 5747,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -711,17 +711,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 183,
+        "quantity": 180,
         "onHandQuantity": 0,
-        "leadTimeDays": 20,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 183,
+        "quantity": 180,
         "onHandQuantity": 0,
-        "leadTimeDays": 15,
+        "leadTimeDays": 16,
         "storeNumber": "149"
       },
       {
@@ -738,7 +738,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 15,
+    "deliveryLeadTimeDays": 16,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/4492f11d-a93a-4532-87e2-47345140ab93/65157286.jpg",
@@ -807,7 +807,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-10-24T13:49:27.376Z",
+    "scrapedAt": "2026-10-24T23:57:47.110Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -920,7 +920,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.5,
-    "reviewCount": 356,
+    "reviewCount": 358,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -1026,7 +1026,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-10-24T13:49:27.750Z",
+    "scrapedAt": "2026-10-24T23:57:47.367Z",
     "weight": 357,
     "dimensions": {
       "depth": {
