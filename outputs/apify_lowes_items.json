@@ -4,7 +4,7 @@
     "itemNumber": "5044180",
     "modelNumber": "RF29BB8600QL",
     "brand": "Samsung",
-    "title": "Bespoke AI Standard-Depth Beverage Center 29-cu ft 4 -Door 36-in Wide with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
+    "title": "Bespoke AI Standard-Depth Beverage Center 29-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Bespoke-28-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-water-dispenser-and-Door-within-Door-Fingerprint-Resistant-Stainless-Steel-All-Panels-ENERGY-STAR/5013373117",
     "price": 2199,
     "priceMax": null,
@@ -21,7 +21,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5782,
+    "reviewCount": 5786,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -36,15 +36,15 @@
         "available": true,
         "quantity": 152,
         "onHandQuantity": 0,
-        "leadTimeDays": 7,
+        "leadTimeDays": 6,
         "storeNumber": "3461"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 161,
+        "quantity": 160,
         "onHandQuantity": 0,
-        "leadTimeDays": 2,
+        "leadTimeDays": 1,
         "storeNumber": "3461"
       },
       {
@@ -61,7 +61,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "3461",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 2,
+    "deliveryLeadTimeDays": 1,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
@@ -134,7 +134,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-11-06T02:00:51.566Z",
+    "scrapedAt": "2026-11-06T17:07:18.866Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -232,7 +232,7 @@
     "itemNumber": "6812006",
     "modelNumber": "RF90F29AECR",
     "brand": "Samsung",
-    "title": "Bespoke AI Standard-Depth Family Hub 32\" 29-cu ft 4 -Door 36-in Wide with Dual Ice Maker and Door within Door ( Charcoal Glass Top with Stainless Steel Bottom Panels ) ENERGY STAR Certified",
+    "title": "Bespoke AI Standard-Depth Family Hub 32\" 29-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Charcoal Glass Top with Stainless Steel Bottom Panels ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-29-cu-ft-Bespoke-4-Door-French-Door-Refrigerator-with-AI-Family-Hub-in-Charcoal-Glass-and-Stainless-Steel/5016101863",
     "price": 3499,
     "priceMax": null,
@@ -249,7 +249,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.7,
-    "reviewCount": 1002,
+    "reviewCount": 1003,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -264,7 +264,7 @@
         "available": true,
         "quantity": 23,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -272,7 +272,7 @@
         "available": true,
         "quantity": 23,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -289,7 +289,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/2c0e5a2d-f0c9-4aa4-9da0-0ad554b04ec6/95295551.jpeg",
@@ -361,7 +361,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-11-06T02:00:58.542Z",
+    "scrapedAt": "2026-11-06T17:07:23.789Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -459,7 +459,7 @@
     "itemNumber": "5042324",
     "modelNumber": "RF23BB860012",
     "brand": "Samsung",
-    "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide with Dual Ice Maker and Door within Door ( White Glass ) ENERGY STAR Certified",
+    "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( White Glass ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Counter-depth-22-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-Door-within-Door-White-Glass-All-Panels-ENERGY-STAR/5013377721",
     "price": 2299,
     "priceMax": null,
@@ -476,7 +476,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5782,
+    "reviewCount": 5786,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -489,17 +489,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 53,
+        "quantity": 51,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 53,
+        "quantity": 51,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -516,7 +516,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/152330d0-41f0-4cbd-be9a-70cec52ffe8c/65163496.jpg",
@@ -588,7 +588,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-11-06T02:00:43.688Z",
+    "scrapedAt": "2026-11-06T17:07:24.050Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -686,7 +686,7 @@
     "itemNumber": "5069344",
     "modelNumber": "RF23BB8600QL",
     "brand": "Samsung",
-    "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
+    "title": "Bespoke AI Counter-Depth Beverage Center 23-cu ft 4 -Door 36-in Wide French Door Refrigerator with Dual Ice Maker and Door within Door ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Counter-depth-22-8-cu-ft-4-Door-Smart-French-Door-Refrigerator-with-Dual-Ice-Maker-and-Door-within-Door-Stainless-Steel-All-Panels-ENERGY-STAR/5013380587",
     "price": 2299,
     "priceMax": null,
@@ -703,7 +703,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5782,
+    "reviewCount": 5786,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -718,7 +718,7 @@
         "available": true,
         "quantity": 143,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -726,7 +726,7 @@
         "available": true,
         "quantity": 143,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -743,7 +743,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/4492f11d-a93a-4532-87e2-47345140ab93/65157286.jpg",
@@ -815,7 +815,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-11-06T02:00:45.783Z",
+    "scrapedAt": "2026-11-06T17:07:19.938Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -913,7 +913,7 @@
     "itemNumber": "6023802",
     "modelNumber": "RF70F29DER",
     "brand": "Samsung",
-    "title": "Bespoke AI Standard-Depth Inner Beverage Center 29-cu ft 4 -Door 36-in Wide with Ice Maker ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
+    "title": "Bespoke AI Standard-Depth Inner Beverage Center 29-cu ft 4 -Door 36-in Wide French Door Refrigerator with Ice Maker ( Fingerprint Resistant Stainless Steel ) ENERGY STAR Certified",
     "url": "https://www.lowes.com/pd/Samsung-Bespoke-French-Door-Refrigerator/5015763503",
     "price": 2099,
     "priceMax": null,
@@ -945,7 +945,7 @@
         "available": true,
         "quantity": 5,
         "onHandQuantity": 0,
-        "leadTimeDays": 22,
+        "leadTimeDays": 21,
         "storeNumber": "149"
       },
       {
@@ -953,7 +953,7 @@
         "available": true,
         "quantity": 5,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -970,7 +970,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/45bec465-0505-4dc6-8936-51cbb8355a57/69662792.jpeg",
@@ -1039,7 +1039,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-11-06T02:00:49.366Z",
+    "scrapedAt": "2026-11-06T17:07:20.981Z",
     "weight": 357,
     "dimensions": {
       "depth": {
