@@ -21,7 +21,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5786,
+    "reviewCount": 5800,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -36,15 +36,15 @@
         "available": true,
         "quantity": 149,
         "onHandQuantity": 0,
-        "leadTimeDays": 6,
+        "leadTimeDays": 5,
         "storeNumber": "3461"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 156,
+        "quantity": 153,
         "onHandQuantity": 0,
-        "leadTimeDays": 2,
+        "leadTimeDays": 1,
         "storeNumber": "3461"
       },
       {
@@ -61,7 +61,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "3461",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 2,
+    "deliveryLeadTimeDays": 1,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/69408e7f-eccb-4150-a013-b40beca7de4d/65137841.jpg",
@@ -98,32 +98,464 @@
     ],
     "specifications": [
       {
-        "key": "Fingerprint Resistant",
-        "value": "Fingerprint Resistant"
+        "key": "Sub-Brand",
+        "value": "Bespoke AI"
+      },
+      {
+        "key": "Appliance Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Door Texture",
+        "value": "Smooth"
+      },
+      {
+        "key": "Bulb Type",
+        "value": "LED"
+      },
+      {
+        "key": "Handle Type",
+        "value": "Integrated"
+      },
+      {
+        "key": "Number of Doors",
+        "value": "4"
+      },
+      {
+        "key": "Cabinet Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Door Style",
+        "value": "Flat"
+      },
+      {
+        "key": "Toe Grille Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Appliance Color/Finish",
+        "value": "Stainless steel"
+      },
+      {
+        "key": "Freezer Door Style",
+        "value": "Pull-out drawer"
+      },
+      {
+        "key": "Manufacturer Color/Finish",
+        "value": "Fingerprint Resistant Stainless Steel"
+      },
+      {
+        "key": "Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Ice Type",
+        "value": null
+      },
+      {
+        "key": "Use Location",
+        "value": null
+      },
+      {
+        "key": "Actual Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Height to Top of Door (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Depth Type",
+        "value": "Standard-Depth"
+      },
+      {
+        "key": "Refrigerator Size",
+        "value": "Medium (33 - 36-in)"
+      },
+      {
+        "key": "Popular Widths",
+        "value": "36-in"
+      },
+      {
+        "key": "Depth (Excluding Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Including Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Less Door) (Inches)",
+        "value": "29.38"
+      },
+      {
+        "key": "Height to Top of Case (Inches)",
+        "value": "68.88"
+      },
+      {
+        "key": "Height to Top of Door Hinge (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Overall Capacity (Cu. Feet)",
+        "value": "29"
+      },
+      {
+        "key": "Depth with Door Open (Inches)",
+        "value": "53.25"
+      },
+      {
+        "key": "Common Width (Inches)",
+        "value": "36"
+      },
+      {
+        "key": "Freezer Capacity (Cu. Feet)",
+        "value": "9"
+      },
+      {
+        "key": "Refrigerator Capacity (Cu. Feet)",
+        "value": "16.7"
+      },
+      {
+        "key": "Weight (lbs.)",
+        "value": "348.3"
+      },
+      {
+        "key": "Built-In",
+        "value": "No"
+      },
+      {
+        "key": "Door within Door",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Fingerprint-Resistant",
+        "value": "Yes"
+      },
+      {
+        "key": "LED Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Touch Screen",
+        "value": "No"
+      },
+      {
+        "key": "Filtered Ice",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Soft Close Drawers",
+        "value": "No"
+      },
+      {
+        "key": "Panel Ready",
+        "value": "No"
+      },
+      {
+        "key": "Professional",
+        "value": "No"
+      },
+      {
+        "key": "Reversible Freezer Door",
+        "value": "No"
+      },
+      {
+        "key": "Ice and Water Dispensers",
+        "value": "Water"
+      },
+      {
+        "key": "Ice/Water Location",
+        "value": "Internal dispenser"
+      },
+      {
+        "key": "Hub Required",
+        "value": "No"
+      },
+      {
+        "key": "Child Safety Locks",
+        "value": "No"
+      },
+      {
+        "key": "Garage Ready",
+        "value": "No"
+      },
+      {
+        "key": "Door Alarm",
+        "value": "Yes"
+      },
+      {
+        "key": "Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Gallon Door Storage",
+        "value": "Yes"
+      },
+      {
+        "key": "Hidden Hinge",
+        "value": "Yes"
+      },
+      {
+        "key": "See-Thru Door",
+        "value": "No"
+      },
+      {
+        "key": "Water Filtration",
+        "value": "Yes"
+      },
+      {
+        "key": "Model",
+        "value": "RF29BB8600QLAA"
+      },
+      {
+        "key": "Water Filter Indicator",
+        "value": "Yes"
+      },
+      {
+        "key": "Dispenser Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Space-Saving In-Door Ice",
+        "value": "No"
+      },
+      {
+        "key": "Air Filtration",
+        "value": "No"
+      },
+      {
+        "key": "Refrigerator Interior Lighting",
+        "value": "LED"
+      },
+      {
+        "key": "Electronic Temperature Control",
+        "value": "Yes"
+      },
+      {
+        "key": "Shelf Options",
+        "value": "Spillproof glass shelves"
+      },
+      {
+        "key": "Temperature Controlled Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Snack/Deli Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Pantry Drawer",
+        "value": "Temperature-controlled"
+      },
+      {
+        "key": "Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Frost-Free",
+        "value": "Yes"
+      },
+      {
+        "key": "Voice Controlled",
+        "value": "No"
+      },
+      {
+        "key": "Customizable",
+        "value": "No"
       },
       {
         "key": "Ice Maker",
         "value": "Dual"
       },
       {
+        "key": "Patterned",
+        "value": "No"
+      },
+      {
+        "key": "Lowe's Exclusive",
+        "value": "No"
+      },
+      {
         "key": "Built-in Water Pitcher",
         "value": "Yes"
       },
       {
-        "key": "Door within Door",
-        "value": "Door within Door"
+        "key": "Automatic Door Sensor",
+        "value": "No"
       },
       {
-        "key": "Dimensions",
-        "value": "35.75\" W x 34.25\" D x 70\" H"
+        "key": "Automatic Drawer Sensor",
+        "value": "No"
       },
       {
-        "key": "Dispenser Type",
-        "value": "Water"
+        "key": "Zero Clearance",
+        "value": "No"
       },
       {
-        "key": "Ice Type",
-        "value": "Cubed"
+        "key": "Evaporative Cooling System",
+        "value": "Dual"
+      },
+      {
+        "key": "Matching Replacement Water Filter Model",
+        "value": "HAF-QINS"
+      },
+      {
+        "key": "Works with SmartThings",
+        "value": "Yes"
+      },
+      {
+        "key": "Smart Compatible",
+        "value": "Yes"
+      },
+      {
+        "key": "Custom Door Kit Compatible",
+        "value": "No"
+      },
+      {
+        "key": "Works with the Google Assistant",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Sonos",
+        "value": "No"
+      },
+      {
+        "key": "Wi-Fi Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Android",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Apple HomeKit",
+        "value": "No"
+      },
+      {
+        "key": "Works with Amazon Alexa",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with iOS",
+        "value": "Yes"
+      },
+      {
+        "key": "Bluetooth Compatibility",
+        "value": "No"
+      },
+      {
+        "key": "App Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Warranty",
+        "value": "1-year limited"
+      },
+      {
+        "key": "CA Residents: Prop 65 Warning(s)",
+        "value": "Yes"
+      },
+      {
+        "key": "ENERGY STAR Certified",
+        "value": "Yes"
+      },
+      {
+        "key": "ADA Compliant",
+        "value": "Yes"
+      },
+      {
+        "key": "Approved for Outdoor Use",
+        "value": "No"
+      },
+      {
+        "key": "Safety Listing",
+        "value": "cUL safety listing"
+      },
+      {
+        "key": "Connectivity",
+        "value": null
+      },
+      {
+        "key": "Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Operating System Compatibility",
+        "value": null
+      },
+      {
+        "key": "Compatible Bulb Type",
+        "value": null
+      },
+      {
+        "key": "Number of Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Collection/Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Number of Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Number of Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Number of Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Works With",
+        "value": null
+      },
+      {
+        "key": "Features",
+        "value": null
+      },
+      {
+        "key": "Legal & Regulatory Compliance Requirements",
+        "value": null
+      },
+      {
+        "key": "UNSPSC",
+        "value": "52141500"
       }
     ],
     "department": "APPLIANCES",
@@ -134,7 +566,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 1,
-    "scrapedAt": "2026-11-07T01:33:10.593Z",
+    "scrapedAt": "2026-11-07T16:04:10.608Z",
     "weight": 385.809,
     "dimensions": {
       "depth": {
@@ -223,8 +655,8 @@
         "value": "1"
       }
     },
-    "lowesExclusive": null,
-    "energyStar": null,
+    "lowesExclusive": false,
+    "energyStar": true,
     "maxPurchaseQuantity": 0
   },
   "5016101863": {
@@ -249,7 +681,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.7,
-    "reviewCount": 1003,
+    "reviewCount": 1009,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -264,7 +696,7 @@
         "available": true,
         "quantity": 22,
         "onHandQuantity": 0,
-        "leadTimeDays": 25,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
@@ -272,7 +704,7 @@
         "available": true,
         "quantity": 22,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -289,7 +721,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/2c0e5a2d-f0c9-4aa4-9da0-0ad554b04ec6/95295551.jpeg",
@@ -325,32 +757,452 @@
     ],
     "specifications": [
       {
-        "key": "Ice Maker",
-        "value": "Dual"
+        "key": "Sub-Brand",
+        "value": "Bespoke AI"
       },
       {
-        "key": "Built-in Water Pitcher",
-        "value": "Yes"
+        "key": "Appliance Type",
+        "value": "French door refrigerator"
       },
       {
-        "key": "Door within Door",
-        "value": "Door within Door"
+        "key": "Door Texture",
+        "value": "Smooth"
+      },
+      {
+        "key": "Handle Type",
+        "value": "Integrated"
+      },
+      {
+        "key": "Number of Doors",
+        "value": "4"
+      },
+      {
+        "key": "Cabinet Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Door Style",
+        "value": "Flat"
+      },
+      {
+        "key": "Toe Grille Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Appliance Color/Finish",
+        "value": "Stainless steel"
+      },
+      {
+        "key": "Freezer Door Style",
+        "value": "Pull-out drawer"
+      },
+      {
+        "key": "Manufacturer Color/Finish",
+        "value": "Charcoal Glass Top with Stainless Steel Bottom Panels"
+      },
+      {
+        "key": "Series Name",
+        "value": "Family Hub 32\""
+      },
+      {
+        "key": "Ice Type",
+        "value": null
+      },
+      {
+        "key": "Use Location",
+        "value": null
+      },
+      {
+        "key": "Actual Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Height to Top of Door (Inches)",
+        "value": "70.25"
       },
       {
         "key": "Depth Type",
         "value": "Standard-Depth"
       },
       {
-        "key": "Dimensions",
-        "value": "35.75\" W x 34.25\" D x 70.25\" H"
+        "key": "Refrigerator Size",
+        "value": "Medium (33 - 36-in)"
       },
       {
-        "key": "Dispenser Type",
+        "key": "Popular Widths",
+        "value": "36-in"
+      },
+      {
+        "key": "Depth (Excluding Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Including Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Less Door) (Inches)",
+        "value": "29.37"
+      },
+      {
+        "key": "Height to Top of Case (Inches)",
+        "value": "68.87"
+      },
+      {
+        "key": "Height to Top of Door Hinge (Inches)",
+        "value": "70.25"
+      },
+      {
+        "key": "Overall Capacity (Cu. Feet)",
+        "value": "29"
+      },
+      {
+        "key": "Depth with Door Open (Inches)",
+        "value": "48.5"
+      },
+      {
+        "key": "Common Width (Inches)",
+        "value": "36"
+      },
+      {
+        "key": "Freezer Capacity (Cu. Feet)",
+        "value": "9"
+      },
+      {
+        "key": "Refrigerator Capacity (Cu. Feet)",
+        "value": "16.5"
+      },
+      {
+        "key": "Weight (lbs.)",
+        "value": "363.8"
+      },
+      {
+        "key": "Built-In",
+        "value": "No"
+      },
+      {
+        "key": "Door within Door",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Fingerprint-Resistant",
+        "value": "No"
+      },
+      {
+        "key": "LED Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Touch Screen",
+        "value": "Yes"
+      },
+      {
+        "key": "Filtered Ice",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Soft Close Drawers",
+        "value": "No"
+      },
+      {
+        "key": "Panel Ready",
+        "value": "No"
+      },
+      {
+        "key": "Professional",
+        "value": "No"
+      },
+      {
+        "key": "Reversible Freezer Door",
+        "value": "No"
+      },
+      {
+        "key": "Ice and Water Dispensers",
         "value": "Water"
       },
       {
-        "key": "Ice Type",
-        "value": "Cubed"
+        "key": "Ice/Water Location",
+        "value": "Internal dispenser"
+      },
+      {
+        "key": "Hub Required",
+        "value": "No"
+      },
+      {
+        "key": "Child Safety Locks",
+        "value": "No"
+      },
+      {
+        "key": "Garage Ready",
+        "value": "No"
+      },
+      {
+        "key": "Door Alarm",
+        "value": "Yes"
+      },
+      {
+        "key": "Door Shelves",
+        "value": "3"
+      },
+      {
+        "key": "Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Gallon Door Storage",
+        "value": "Yes"
+      },
+      {
+        "key": "Hidden Hinge",
+        "value": "Yes"
+      },
+      {
+        "key": "See-Thru Door",
+        "value": "No"
+      },
+      {
+        "key": "Water Filtration",
+        "value": "Yes"
+      },
+      {
+        "key": "Water Filter Indicator",
+        "value": "Yes"
+      },
+      {
+        "key": "Dispenser Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Space-Saving In-Door Ice",
+        "value": "No"
+      },
+      {
+        "key": "Air Filtration",
+        "value": "No"
+      },
+      {
+        "key": "Refrigerator Interior Lighting",
+        "value": "LED"
+      },
+      {
+        "key": "Electronic Temperature Control",
+        "value": "Yes"
+      },
+      {
+        "key": "Shelf Options",
+        "value": "Spillproof glass shelves"
+      },
+      {
+        "key": "Temperature Controlled Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Snack/Deli Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Pantry Drawer",
+        "value": "Temperature-controlled"
+      },
+      {
+        "key": "Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Frost-Free",
+        "value": "Yes"
+      },
+      {
+        "key": "Voice Controlled",
+        "value": "Yes"
+      },
+      {
+        "key": "Customizable",
+        "value": "No"
+      },
+      {
+        "key": "Ice Maker",
+        "value": "Dual"
+      },
+      {
+        "key": "Lowe's Exclusive",
+        "value": "No"
+      },
+      {
+        "key": "Built-in Water Pitcher",
+        "value": "Yes"
+      },
+      {
+        "key": "Automatic Door Sensor",
+        "value": "Yes"
+      },
+      {
+        "key": "Automatic Drawer Sensor",
+        "value": "No"
+      },
+      {
+        "key": "Zero Clearance",
+        "value": "No"
+      },
+      {
+        "key": "Evaporative Cooling System",
+        "value": "Dual"
+      },
+      {
+        "key": "Matching Replacement Water Filter Model",
+        "value": "HAF-QINS"
+      },
+      {
+        "key": "Works with SmartThings",
+        "value": "Yes"
+      },
+      {
+        "key": "Smart Compatible",
+        "value": "Yes"
+      },
+      {
+        "key": "Custom Door Kit Compatible",
+        "value": "No"
+      },
+      {
+        "key": "Works with the Google Assistant",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Sonos",
+        "value": "No"
+      },
+      {
+        "key": "Wi-Fi Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Android",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Apple HomeKit",
+        "value": "No"
+      },
+      {
+        "key": "Works with Amazon Alexa",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with iOS",
+        "value": "Yes"
+      },
+      {
+        "key": "Matching Previous (Model #)",
+        "value": "RF29BB8900QK"
+      },
+      {
+        "key": "Bluetooth Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "App Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Warranty",
+        "value": "1-year limited"
+      },
+      {
+        "key": "CA Residents: Prop 65 Warning(s)",
+        "value": "Yes"
+      },
+      {
+        "key": "ENERGY STAR Certified",
+        "value": "Yes"
+      },
+      {
+        "key": "ADA Compliant",
+        "value": "No"
+      },
+      {
+        "key": "Approved for Outdoor Use",
+        "value": "No"
+      },
+      {
+        "key": "Safety Listing",
+        "value": "UL safety listing"
+      },
+      {
+        "key": "CEE Tier Qualified",
+        "value": "CEE Tier I"
+      },
+      {
+        "key": "Connectivity",
+        "value": null
+      },
+      {
+        "key": "Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Operating System Compatibility",
+        "value": null
+      },
+      {
+        "key": "Number of Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Collection/Series Name",
+        "value": "Family Hub 32\""
+      },
+      {
+        "key": "Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Number of Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Number of Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Number of Door Shelves",
+        "value": "3"
+      },
+      {
+        "key": "Works With",
+        "value": null
+      },
+      {
+        "key": "Features",
+        "value": null
+      },
+      {
+        "key": "UNSPSC",
+        "value": "52141500"
       }
     ],
     "department": "APPLIANCES",
@@ -361,7 +1213,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 2,
-    "scrapedAt": "2026-11-07T01:33:09.835Z",
+    "scrapedAt": "2026-11-07T16:04:12.040Z",
     "weight": 377,
     "dimensions": {
       "depth": {
@@ -450,8 +1302,8 @@
         "value": "1"
       }
     },
-    "lowesExclusive": null,
-    "energyStar": null,
+    "lowesExclusive": false,
+    "energyStar": true,
     "maxPurchaseQuantity": null
   },
   "5013377721": {
@@ -476,7 +1328,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5786,
+    "reviewCount": 5800,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -489,17 +1341,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 49,
+        "quantity": 47,
         "onHandQuantity": 0,
-        "leadTimeDays": 25,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 49,
+        "quantity": 47,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -516,7 +1368,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/152330d0-41f0-4cbd-be9a-70cec52ffe8c/65163496.jpg",
@@ -552,32 +1404,460 @@
     ],
     "specifications": [
       {
-        "key": "Ice Maker",
-        "value": "Dual"
+        "key": "Sub-Brand",
+        "value": "Bespoke AI"
       },
       {
-        "key": "Built-in Water Pitcher",
-        "value": "Yes"
+        "key": "Appliance Type",
+        "value": "French door refrigerator"
       },
       {
-        "key": "Door within Door",
-        "value": "Door within Door"
+        "key": "Door Texture",
+        "value": "Smooth"
+      },
+      {
+        "key": "Bulb Type",
+        "value": "LED"
+      },
+      {
+        "key": "Handle Type",
+        "value": "Integrated"
+      },
+      {
+        "key": "Number of Doors",
+        "value": "4"
+      },
+      {
+        "key": "Cabinet Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Door Style",
+        "value": "Flat"
+      },
+      {
+        "key": "Toe Grille Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Appliance Color/Finish",
+        "value": "White"
+      },
+      {
+        "key": "Freezer Door Style",
+        "value": "Pull-out drawer"
+      },
+      {
+        "key": "Manufacturer Color/Finish",
+        "value": "White Glass"
+      },
+      {
+        "key": "Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Ice Type",
+        "value": null
+      },
+      {
+        "key": "Use Location",
+        "value": null
+      },
+      {
+        "key": "Actual Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Height to Top of Door (Inches)",
+        "value": "70"
       },
       {
         "key": "Depth Type",
         "value": "Counter-Depth"
       },
       {
-        "key": "Dimensions",
-        "value": "35.75\" W x 28.75\" D x 70\" H"
+        "key": "Refrigerator Size",
+        "value": "Medium (33 - 36-in)"
       },
       {
-        "key": "Dispenser Type",
+        "key": "Popular Widths",
+        "value": "36-in"
+      },
+      {
+        "key": "Depth (Excluding Handles) (Inches)",
+        "value": "28.75"
+      },
+      {
+        "key": "Depth (Including Handles) (Inches)",
+        "value": "28.75"
+      },
+      {
+        "key": "Depth (Less Door) (Inches)",
+        "value": "24"
+      },
+      {
+        "key": "Height to Top of Case (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Height to Top of Door Hinge (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Overall Capacity (Cu. Feet)",
+        "value": "23"
+      },
+      {
+        "key": "Depth with Door Open (Inches)",
+        "value": "44.5"
+      },
+      {
+        "key": "Common Width (Inches)",
+        "value": "36"
+      },
+      {
+        "key": "Freezer Capacity (Cu. Feet)",
+        "value": "6.8"
+      },
+      {
+        "key": "Refrigerator Capacity (Cu. Feet)",
+        "value": "13.5"
+      },
+      {
+        "key": "Weight (lbs.)",
+        "value": "341.7"
+      },
+      {
+        "key": "Built-In",
+        "value": "No"
+      },
+      {
+        "key": "Door within Door",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Fingerprint-Resistant",
+        "value": "No"
+      },
+      {
+        "key": "LED Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Touch Screen",
+        "value": "No"
+      },
+      {
+        "key": "Filtered Ice",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Soft Close Drawers",
+        "value": "No"
+      },
+      {
+        "key": "Panel Ready",
+        "value": "No"
+      },
+      {
+        "key": "Professional",
+        "value": "No"
+      },
+      {
+        "key": "Reversible Freezer Door",
+        "value": "No"
+      },
+      {
+        "key": "Ice and Water Dispensers",
         "value": "Water"
       },
       {
-        "key": "Ice Type",
-        "value": "Cubed"
+        "key": "Ice/Water Location",
+        "value": "Internal dispenser"
+      },
+      {
+        "key": "Hub Required",
+        "value": "No"
+      },
+      {
+        "key": "Child Safety Locks",
+        "value": "No"
+      },
+      {
+        "key": "Garage Ready",
+        "value": "No"
+      },
+      {
+        "key": "Door Alarm",
+        "value": "Yes"
+      },
+      {
+        "key": "Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Gallon Door Storage",
+        "value": "Yes"
+      },
+      {
+        "key": "Hidden Hinge",
+        "value": "Yes"
+      },
+      {
+        "key": "See-Thru Door",
+        "value": "No"
+      },
+      {
+        "key": "Water Filtration",
+        "value": "Yes"
+      },
+      {
+        "key": "Model",
+        "value": "RF23BB860012AA"
+      },
+      {
+        "key": "Water Filter Indicator",
+        "value": "Yes"
+      },
+      {
+        "key": "Dispenser Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Space-Saving In-Door Ice",
+        "value": "No"
+      },
+      {
+        "key": "Air Filtration",
+        "value": "No"
+      },
+      {
+        "key": "Refrigerator Interior Lighting",
+        "value": "LED"
+      },
+      {
+        "key": "Electronic Temperature Control",
+        "value": "Yes"
+      },
+      {
+        "key": "Shelf Options",
+        "value": "Spillproof glass shelves"
+      },
+      {
+        "key": "Temperature Controlled Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Snack/Deli Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Pantry Drawer",
+        "value": "Temperature-controlled"
+      },
+      {
+        "key": "Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Frost-Free",
+        "value": "Yes"
+      },
+      {
+        "key": "Voice Controlled",
+        "value": "No"
+      },
+      {
+        "key": "Customizable",
+        "value": "No"
+      },
+      {
+        "key": "Ice Maker",
+        "value": "Dual"
+      },
+      {
+        "key": "Lowe's Exclusive",
+        "value": "No"
+      },
+      {
+        "key": "Built-in Water Pitcher",
+        "value": "Yes"
+      },
+      {
+        "key": "Automatic Door Sensor",
+        "value": "No"
+      },
+      {
+        "key": "Automatic Drawer Sensor",
+        "value": "No"
+      },
+      {
+        "key": "Zero Clearance",
+        "value": "No"
+      },
+      {
+        "key": "Evaporative Cooling System",
+        "value": "Dual"
+      },
+      {
+        "key": "Matching Replacement Water Filter Model",
+        "value": "HAF-QINS"
+      },
+      {
+        "key": "Works with SmartThings",
+        "value": "Yes"
+      },
+      {
+        "key": "Smart Compatible",
+        "value": "Yes"
+      },
+      {
+        "key": "Custom Door Kit Compatible",
+        "value": "No"
+      },
+      {
+        "key": "Works with the Google Assistant",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Sonos",
+        "value": "No"
+      },
+      {
+        "key": "Wi-Fi Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Android",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Apple HomeKit",
+        "value": "No"
+      },
+      {
+        "key": "Works with Amazon Alexa",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with iOS",
+        "value": "Yes"
+      },
+      {
+        "key": "Bluetooth Compatibility",
+        "value": "No"
+      },
+      {
+        "key": "App Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Warranty",
+        "value": "1-year limited"
+      },
+      {
+        "key": "CA Residents: Prop 65 Warning(s)",
+        "value": "Yes"
+      },
+      {
+        "key": "ENERGY STAR Certified",
+        "value": "Yes"
+      },
+      {
+        "key": "ADA Compliant",
+        "value": "Yes"
+      },
+      {
+        "key": "Approved for Outdoor Use",
+        "value": "No"
+      },
+      {
+        "key": "Safety Listing",
+        "value": "cUL safety listing"
+      },
+      {
+        "key": "Connectivity",
+        "value": null
+      },
+      {
+        "key": "Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Operating System Compatibility",
+        "value": null
+      },
+      {
+        "key": "Compatible Bulb Type",
+        "value": null
+      },
+      {
+        "key": "Number of Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Collection/Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Number of Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Number of Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Number of Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Works With",
+        "value": null
+      },
+      {
+        "key": "Features",
+        "value": null
+      },
+      {
+        "key": "Legal & Regulatory Compliance Requirements",
+        "value": null
+      },
+      {
+        "key": "UNSPSC",
+        "value": "52141500"
       }
     ],
     "department": "APPLIANCES",
@@ -588,7 +1868,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 3,
-    "scrapedAt": "2026-11-07T01:33:13.424Z",
+    "scrapedAt": "2026-11-07T16:04:08.564Z",
     "weight": 362.66,
     "dimensions": {
       "depth": {
@@ -677,8 +1957,8 @@
         "value": "1"
       }
     },
-    "lowesExclusive": null,
-    "energyStar": null,
+    "lowesExclusive": false,
+    "energyStar": true,
     "maxPurchaseQuantity": 0
   },
   "5013380587": {
@@ -703,7 +1983,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.6,
-    "reviewCount": 5786,
+    "reviewCount": 5800,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -716,17 +1996,17 @@
       {
         "method": "Pickup",
         "available": true,
-        "quantity": 138,
+        "quantity": 135,
         "onHandQuantity": 0,
-        "leadTimeDays": 25,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
         "method": "Delivery",
         "available": true,
-        "quantity": 138,
+        "quantity": 135,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -743,7 +2023,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/4492f11d-a93a-4532-87e2-47345140ab93/65157286.jpg",
@@ -779,32 +2059,460 @@
     ],
     "specifications": [
       {
-        "key": "Fingerprint Resistant",
-        "value": "Fingerprint Resistant"
+        "key": "Sub-Brand",
+        "value": "Bespoke AI"
+      },
+      {
+        "key": "Appliance Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Door Texture",
+        "value": "Smooth"
+      },
+      {
+        "key": "Bulb Type",
+        "value": "LED"
+      },
+      {
+        "key": "Handle Type",
+        "value": "Integrated"
+      },
+      {
+        "key": "Number of Doors",
+        "value": "4"
+      },
+      {
+        "key": "Cabinet Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Door Style",
+        "value": "Flat"
+      },
+      {
+        "key": "Toe Grille Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Appliance Color/Finish",
+        "value": "Stainless steel"
+      },
+      {
+        "key": "Freezer Door Style",
+        "value": "Pull-out drawer"
+      },
+      {
+        "key": "Manufacturer Color/Finish",
+        "value": "Fingerprint Resistant Stainless Steel"
+      },
+      {
+        "key": "Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Ice Type",
+        "value": null
+      },
+      {
+        "key": "Use Location",
+        "value": null
+      },
+      {
+        "key": "Actual Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Height to Top of Door (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Depth Type",
+        "value": "Counter-Depth"
+      },
+      {
+        "key": "Refrigerator Size",
+        "value": "Medium (33 - 36-in)"
+      },
+      {
+        "key": "Popular Widths",
+        "value": "36-in"
+      },
+      {
+        "key": "Depth (Excluding Handles) (Inches)",
+        "value": "28.75"
+      },
+      {
+        "key": "Depth (Including Handles) (Inches)",
+        "value": "28.75"
+      },
+      {
+        "key": "Depth (Less Door) (Inches)",
+        "value": "24"
+      },
+      {
+        "key": "Height to Top of Case (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Height to Top of Door Hinge (Inches)",
+        "value": "70"
+      },
+      {
+        "key": "Overall Capacity (Cu. Feet)",
+        "value": "23"
+      },
+      {
+        "key": "Depth with Door Open (Inches)",
+        "value": "44.5"
+      },
+      {
+        "key": "Common Width (Inches)",
+        "value": "36"
+      },
+      {
+        "key": "Freezer Capacity (Cu. Feet)",
+        "value": "6.8"
+      },
+      {
+        "key": "Refrigerator Capacity (Cu. Feet)",
+        "value": "13.5"
+      },
+      {
+        "key": "Weight (lbs.)",
+        "value": "321.9"
+      },
+      {
+        "key": "Built-In",
+        "value": "No"
+      },
+      {
+        "key": "Door within Door",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Fingerprint-Resistant",
+        "value": "Yes"
+      },
+      {
+        "key": "LED Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Touch Screen",
+        "value": "No"
+      },
+      {
+        "key": "Filtered Ice",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Soft Close Drawers",
+        "value": "No"
+      },
+      {
+        "key": "Panel Ready",
+        "value": "No"
+      },
+      {
+        "key": "Professional",
+        "value": "No"
+      },
+      {
+        "key": "Reversible Freezer Door",
+        "value": "No"
+      },
+      {
+        "key": "Ice and Water Dispensers",
+        "value": "Water"
+      },
+      {
+        "key": "Ice/Water Location",
+        "value": "Internal dispenser"
+      },
+      {
+        "key": "Hub Required",
+        "value": "No"
+      },
+      {
+        "key": "Child Safety Locks",
+        "value": "No"
+      },
+      {
+        "key": "Garage Ready",
+        "value": "No"
+      },
+      {
+        "key": "Door Alarm",
+        "value": "Yes"
+      },
+      {
+        "key": "Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Gallon Door Storage",
+        "value": "Yes"
+      },
+      {
+        "key": "Hidden Hinge",
+        "value": "Yes"
+      },
+      {
+        "key": "See-Thru Door",
+        "value": "No"
+      },
+      {
+        "key": "Water Filtration",
+        "value": "Yes"
+      },
+      {
+        "key": "Model",
+        "value": "RF23BB8600QLAA"
+      },
+      {
+        "key": "Water Filter Indicator",
+        "value": "Yes"
+      },
+      {
+        "key": "Dispenser Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Space-Saving In-Door Ice",
+        "value": "No"
+      },
+      {
+        "key": "Air Filtration",
+        "value": "No"
+      },
+      {
+        "key": "Refrigerator Interior Lighting",
+        "value": "LED"
+      },
+      {
+        "key": "Electronic Temperature Control",
+        "value": "Yes"
+      },
+      {
+        "key": "Shelf Options",
+        "value": "Spillproof glass shelves"
+      },
+      {
+        "key": "Temperature Controlled Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Snack/Deli Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Pantry Drawer",
+        "value": "Temperature-controlled"
+      },
+      {
+        "key": "Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Frost-Free",
+        "value": "Yes"
+      },
+      {
+        "key": "Voice Controlled",
+        "value": "No"
+      },
+      {
+        "key": "Customizable",
+        "value": "No"
       },
       {
         "key": "Ice Maker",
         "value": "Dual"
       },
       {
+        "key": "Lowe's Exclusive",
+        "value": "No"
+      },
+      {
         "key": "Built-in Water Pitcher",
         "value": "Yes"
       },
       {
-        "key": "Door within Door",
-        "value": "Door within Door"
+        "key": "Automatic Door Sensor",
+        "value": "No"
       },
       {
-        "key": "Dimensions",
-        "value": "35.75\" W x 28.75\" D x 70\" H"
+        "key": "Automatic Drawer Sensor",
+        "value": "No"
       },
       {
-        "key": "Dispenser Type",
-        "value": "Water"
+        "key": "Zero Clearance",
+        "value": "No"
       },
       {
-        "key": "Ice Type",
-        "value": "Cubed"
+        "key": "Evaporative Cooling System",
+        "value": "Dual"
+      },
+      {
+        "key": "Matching Replacement Water Filter Model",
+        "value": "HAF-QINS"
+      },
+      {
+        "key": "Works with SmartThings",
+        "value": "Yes"
+      },
+      {
+        "key": "Smart Compatible",
+        "value": "Yes"
+      },
+      {
+        "key": "Custom Door Kit Compatible",
+        "value": "No"
+      },
+      {
+        "key": "Works with the Google Assistant",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Sonos",
+        "value": "No"
+      },
+      {
+        "key": "Wi-Fi Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Android",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Apple HomeKit",
+        "value": "No"
+      },
+      {
+        "key": "Works with Amazon Alexa",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with iOS",
+        "value": "Yes"
+      },
+      {
+        "key": "Bluetooth Compatibility",
+        "value": "No"
+      },
+      {
+        "key": "App Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Warranty",
+        "value": "1-year limited"
+      },
+      {
+        "key": "CA Residents: Prop 65 Warning(s)",
+        "value": "Yes"
+      },
+      {
+        "key": "ENERGY STAR Certified",
+        "value": "Yes"
+      },
+      {
+        "key": "ADA Compliant",
+        "value": "Yes"
+      },
+      {
+        "key": "Approved for Outdoor Use",
+        "value": "No"
+      },
+      {
+        "key": "Safety Listing",
+        "value": "cUL safety listing"
+      },
+      {
+        "key": "Connectivity",
+        "value": null
+      },
+      {
+        "key": "Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Operating System Compatibility",
+        "value": null
+      },
+      {
+        "key": "Compatible Bulb Type",
+        "value": null
+      },
+      {
+        "key": "Number of Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Collection/Series Name",
+        "value": "Beverage Center"
+      },
+      {
+        "key": "Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Number of Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Number of Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Number of Door Shelves",
+        "value": "6"
+      },
+      {
+        "key": "Works With",
+        "value": null
+      },
+      {
+        "key": "Features",
+        "value": null
+      },
+      {
+        "key": "Legal & Regulatory Compliance Requirements",
+        "value": null
+      },
+      {
+        "key": "UNSPSC",
+        "value": "52141500"
       }
     ],
     "department": "APPLIANCES",
@@ -815,7 +2523,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 4,
-    "scrapedAt": "2026-11-07T01:33:10.224Z",
+    "scrapedAt": "2026-11-07T16:04:08.860Z",
     "weight": 372.6,
     "dimensions": {
       "depth": {
@@ -904,8 +2612,8 @@
         "value": "1"
       }
     },
-    "lowesExclusive": null,
-    "energyStar": null,
+    "lowesExclusive": false,
+    "energyStar": true,
     "maxPurchaseQuantity": 0
   },
   "5015763503": {
@@ -930,7 +2638,7 @@
     "freeShipping": null,
     "availabilityMessage": null,
     "rating": 4.5,
-    "reviewCount": 368,
+    "reviewCount": 370,
     "fulfillment": [
       {
         "method": "Parcel",
@@ -945,7 +2653,7 @@
         "available": true,
         "quantity": 4,
         "onHandQuantity": 0,
-        "leadTimeDays": 25,
+        "leadTimeDays": 24,
         "storeNumber": "149"
       },
       {
@@ -953,7 +2661,7 @@
         "available": true,
         "quantity": 4,
         "onHandQuantity": 0,
-        "leadTimeDays": 16,
+        "leadTimeDays": 15,
         "storeNumber": "149"
       },
       {
@@ -970,7 +2678,7 @@
     "availableForDelivery": true,
     "pickupStoreNumber": "149",
     "pickupQuantity": 0,
-    "deliveryLeadTimeDays": 16,
+    "deliveryLeadTimeDays": 15,
     "storeNumber": "0595",
     "inStock": true,
     "imageUrl": "https://mobileimages.lowes.com/productimages/45bec465-0505-4dc6-8936-51cbb8355a57/69662792.jpeg",
@@ -1003,32 +2711,464 @@
     ],
     "specifications": [
       {
-        "key": "Fingerprint Resistant",
-        "value": "Fingerprint Resistant"
+        "key": "Sub-Brand",
+        "value": "Bespoke AI"
       },
       {
-        "key": "Ice Maker",
-        "value": "Single"
+        "key": "Appliance Type",
+        "value": "French door refrigerator"
       },
       {
-        "key": "Built-in Water Pitcher",
-        "value": "Yes"
+        "key": "Door Texture",
+        "value": "Smooth"
+      },
+      {
+        "key": "Bulb Type",
+        "value": "LED"
+      },
+      {
+        "key": "Handle Type",
+        "value": "Integrated"
+      },
+      {
+        "key": "Number of Doors",
+        "value": "4"
+      },
+      {
+        "key": "Cabinet Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Door Style",
+        "value": "Flat"
+      },
+      {
+        "key": "Toe Grille Color",
+        "value": "Gray"
+      },
+      {
+        "key": "Appliance Color/Finish",
+        "value": "Stainless steel"
+      },
+      {
+        "key": "Freezer Door Style",
+        "value": "Pull-out drawer"
+      },
+      {
+        "key": "Manufacturer Color/Finish",
+        "value": "Fingerprint Resistant Stainless Steel"
+      },
+      {
+        "key": "Series Name",
+        "value": "Inner Beverage Center"
+      },
+      {
+        "key": "Ice Type",
+        "value": null
+      },
+      {
+        "key": "Use Location",
+        "value": null
+      },
+      {
+        "key": "Actual Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Height to Top of Door (Inches)",
+        "value": "70.25"
       },
       {
         "key": "Depth Type",
         "value": "Standard-Depth"
       },
       {
-        "key": "Dimensions",
-        "value": "35.75\" W x 34.25\" D x 70.25\" H"
+        "key": "Refrigerator Size",
+        "value": "Medium (33 - 36-in)"
       },
       {
-        "key": "Dispenser Type",
+        "key": "Popular Widths",
+        "value": "36-in"
+      },
+      {
+        "key": "Depth (Excluding Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Including Handles) (Inches)",
+        "value": "34.25"
+      },
+      {
+        "key": "Depth (Less Door) (Inches)",
+        "value": "29.37"
+      },
+      {
+        "key": "Height to Top of Case (Inches)",
+        "value": "68.9"
+      },
+      {
+        "key": "Height to Top of Door Hinge (Inches)",
+        "value": "70.25"
+      },
+      {
+        "key": "Overall Capacity (Cu. Feet)",
+        "value": "29"
+      },
+      {
+        "key": "Depth with Door Open (Inches)",
+        "value": "48.5"
+      },
+      {
+        "key": "Common Width (Inches)",
+        "value": "36"
+      },
+      {
+        "key": "Freezer Capacity (Cu. Feet)",
+        "value": "9"
+      },
+      {
+        "key": "Refrigerator Capacity (Cu. Feet)",
+        "value": "16.8"
+      },
+      {
+        "key": "Weight (lbs.)",
+        "value": "324.1"
+      },
+      {
+        "key": "Built-In",
+        "value": "No"
+      },
+      {
+        "key": "Door within Door",
+        "value": "No"
+      },
+      {
+        "key": "Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Fingerprint-Resistant",
+        "value": "Yes"
+      },
+      {
+        "key": "LED Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Touch Screen",
+        "value": "No"
+      },
+      {
+        "key": "Filtered Ice",
+        "value": "Yes"
+      },
+      {
+        "key": "Freezer Light",
+        "value": "Yes"
+      },
+      {
+        "key": "Soft Close Drawers",
+        "value": "No"
+      },
+      {
+        "key": "Panel Ready",
+        "value": "No"
+      },
+      {
+        "key": "Professional",
+        "value": "No"
+      },
+      {
+        "key": "Reversible Freezer Door",
+        "value": "No"
+      },
+      {
+        "key": "Ice and Water Dispensers",
         "value": "Water"
       },
       {
-        "key": "Ice Type",
-        "value": "Cubed"
+        "key": "Ice/Water Location",
+        "value": "Internal dispenser"
+      },
+      {
+        "key": "Hub Required",
+        "value": "No"
+      },
+      {
+        "key": "Child Safety Locks",
+        "value": "No"
+      },
+      {
+        "key": "Garage Ready",
+        "value": "No"
+      },
+      {
+        "key": "Door Alarm",
+        "value": "Yes"
+      },
+      {
+        "key": "Door Shelves",
+        "value": "3"
+      },
+      {
+        "key": "Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Gallon Door Storage",
+        "value": "Yes"
+      },
+      {
+        "key": "Hidden Hinge",
+        "value": "Yes"
+      },
+      {
+        "key": "See-Thru Door",
+        "value": "No"
+      },
+      {
+        "key": "Water Filtration",
+        "value": "Yes"
+      },
+      {
+        "key": "Water Filter Indicator",
+        "value": "Yes"
+      },
+      {
+        "key": "Dispenser Light",
+        "value": "No"
+      },
+      {
+        "key": "Space-Saving In-Door Ice",
+        "value": "No"
+      },
+      {
+        "key": "Air Filtration",
+        "value": "No"
+      },
+      {
+        "key": "Refrigerator Interior Lighting",
+        "value": "LED"
+      },
+      {
+        "key": "Electronic Temperature Control",
+        "value": "Yes"
+      },
+      {
+        "key": "Shelf Options",
+        "value": "Spillproof glass shelves"
+      },
+      {
+        "key": "Temperature Controlled Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Snack/Deli Drawer",
+        "value": "Yes"
+      },
+      {
+        "key": "Pantry Drawer",
+        "value": "Temperature-controlled"
+      },
+      {
+        "key": "Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Frost-Free",
+        "value": "Yes"
+      },
+      {
+        "key": "Voice Controlled",
+        "value": "No"
+      },
+      {
+        "key": "Customizable",
+        "value": "No"
+      },
+      {
+        "key": "Ice Maker",
+        "value": "Single"
+      },
+      {
+        "key": "Lowe's Exclusive",
+        "value": "No"
+      },
+      {
+        "key": "Built-in Water Pitcher",
+        "value": "Yes"
+      },
+      {
+        "key": "Automatic Door Sensor",
+        "value": "No"
+      },
+      {
+        "key": "Automatic Drawer Sensor",
+        "value": "No"
+      },
+      {
+        "key": "Zero Clearance",
+        "value": "No"
+      },
+      {
+        "key": "Evaporative Cooling System",
+        "value": "Dual"
+      },
+      {
+        "key": "Matching Replacement Water Filter Model",
+        "value": "HAF-QINS"
+      },
+      {
+        "key": "Works with SmartThings",
+        "value": "Yes"
+      },
+      {
+        "key": "Smart Compatible",
+        "value": "Yes"
+      },
+      {
+        "key": "Custom Door Kit Compatible",
+        "value": "No"
+      },
+      {
+        "key": "Works with the Google Assistant",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Sonos",
+        "value": "No"
+      },
+      {
+        "key": "Wi-Fi Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Android",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with Apple HomeKit",
+        "value": "No"
+      },
+      {
+        "key": "Works with Amazon Alexa",
+        "value": "Yes"
+      },
+      {
+        "key": "Works with iOS",
+        "value": "Yes"
+      },
+      {
+        "key": "Matching Previous (Model #)",
+        "value": "RF29BB8200QL"
+      },
+      {
+        "key": "Bluetooth Compatibility",
+        "value": "No"
+      },
+      {
+        "key": "App Compatibility",
+        "value": "Yes"
+      },
+      {
+        "key": "Warranty",
+        "value": "1-year limited"
+      },
+      {
+        "key": "CA Residents: Prop 65 Warning(s)",
+        "value": "Yes"
+      },
+      {
+        "key": "ENERGY STAR Certified",
+        "value": "Yes"
+      },
+      {
+        "key": "ADA Compliant",
+        "value": "Yes"
+      },
+      {
+        "key": "Approved for Outdoor Use",
+        "value": "No"
+      },
+      {
+        "key": "Safety Listing",
+        "value": "UL safety listing"
+      },
+      {
+        "key": "CEE Tier Qualified",
+        "value": "CEE Tier I"
+      },
+      {
+        "key": "Connectivity",
+        "value": null
+      },
+      {
+        "key": "Width (Inches)",
+        "value": "35.75"
+      },
+      {
+        "key": "Operating System Compatibility",
+        "value": null
+      },
+      {
+        "key": "Compatible Bulb Type",
+        "value": null
+      },
+      {
+        "key": "Number of Freezer Shelves",
+        "value": "0"
+      },
+      {
+        "key": "Collection/Series Name",
+        "value": "Inner Beverage Center"
+      },
+      {
+        "key": "Type",
+        "value": "French door refrigerator"
+      },
+      {
+        "key": "Number of Freezer Baskets",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Door Bins",
+        "value": "0"
+      },
+      {
+        "key": "Number of Freezer Drawers",
+        "value": "1"
+      },
+      {
+        "key": "Number of Humidity-Controlled Crispers",
+        "value": "2"
+      },
+      {
+        "key": "Number of Door Shelves",
+        "value": "3"
+      },
+      {
+        "key": "Works With",
+        "value": null
+      },
+      {
+        "key": "Features",
+        "value": null
+      },
+      {
+        "key": "Legal & Regulatory Compliance Requirements",
+        "value": null
+      },
+      {
+        "key": "UNSPSC",
+        "value": "52141500"
       }
     ],
     "department": "APPLIANCES",
@@ -1039,7 +3179,7 @@
     "searchQuery": null,
     "sourceUrl": null,
     "position": 5,
-    "scrapedAt": "2026-11-07T01:33:10.417Z",
+    "scrapedAt": "2026-11-07T16:04:09.873Z",
     "weight": 357,
     "dimensions": {
       "depth": {
@@ -1128,8 +3268,8 @@
         "value": "1"
       }
     },
-    "lowesExclusive": null,
-    "energyStar": null,
+    "lowesExclusive": false,
+    "energyStar": true,
     "maxPurchaseQuantity": null
   }
 }
